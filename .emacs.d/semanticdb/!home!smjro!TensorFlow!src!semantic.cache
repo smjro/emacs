@@ -1,0 +1,195 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "mnist_experts.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("input_data" include nil nil [1 18])
+            ("mnist" variable nil nil [19 80])
+            ("tensorflow" include nil nil [82 105])
+            ("sess" variable nil nil [106 136])
+            ("x" variable nil nil [138 187])
+            ("y_" variable nil nil [188 237])
+            ("W" variable nil nil [239 274])
+            ("b" variable nil nil [275 306])
+            ("sess" code nil nil [308 347])
+            ("y" variable nil nil [349 386])
+            ("cross_entropy" code nil nil [388 432])
+            ("train_step" variable nil nil [434 510])
+            ("for" code nil nil [512 627])
+            ("correct_prediction" variable nil nil [628 690])
+            ("accuracy" variable nil nil [692 758])
+            ("print" code nil nil [760 837])
+            ("weight_variable" function (:arguments 
+              ( ("shape" variable nil (reparse-symbol function_parameters) [859 864]))              ) nil [839 948])
+            ("bias_variable" function (:arguments 
+              ( ("shape" variable nil (reparse-symbol function_parameters) [967 972]))              ) nil [949 1047])
+            ("conv2d" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1059 1060])
+                ("W" variable nil (reparse-symbol function_parameters) [1062 1063]))              ) nil [1048 1132])
+            ("max_pool_2x2" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1150 1151]))              ) nil [1133 1263])
+            ("W_conv1" variable nil nil [1264 1304])
+            ("b_conv1" variable nil nil [1305 1334])
+            ("x_image" variable nil nil [1336 1373])
+            ("h_conv1" variable nil nil [1375 1431])
+            ("h_pool1" variable nil nil [1432 1463])
+            ("W_conv2" variable nil nil [1465 1506])
+            ("b_conv2" variable nil nil [1507 1536])
+            ("h_conv2" variable nil nil [1538 1594])
+            ("h_pool2" variable nil nil [1595 1626])
+            ("W_fc1" variable nil nil [1628 1671])
+            ("b_fc1" variable nil nil [1672 1701])
+            ("h_pool2_flat" variable nil nil [1703 1751])
+            ("h_fc1" variable nil nil [1752 1810])
+            ("keep_prob" variable nil nil [1812 1850])
+            ("h_fc1_drop" variable nil nil [1851 1895])
+            ("W_fc2" variable nil nil [1897 1932])
+            ("b_fc2" variable nil nil [1933 1960])
+            ("y_conv" variable nil nil [1962 2020])
+            ("cross_entropy" code nil nil [2022 2071])
+            ("train_step" variable nil nil [2072 2137])
+            ("correct_prediction" variable nil nil [2138 2205])
+            ("accuracy" variable nil nil [2206 2272])
+            ("sess" code nil nil [2273 2312])
+            ("for" code nil nil [2313 2623])
+            ("print" code nil nil [2624 2741]))          
+    :file "mnist_experts.py"
+    :pointmax 2742
+    :fsize 2741
+    :lastmodtime '(22251 21544 989698 1000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "input_data.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Functions for downloading and reading MNIST data.\"\"\"" code nil nil [1 56])
+            ("__future__" include nil nil [57 94])
+            ("gzip" include nil nil [95 106])
+            ("os" include nil nil [107 116])
+            ("urllib" include nil nil [117 130])
+            ("numpy" include nil nil [131 143])
+            ("SOURCE_URL" variable nil nil [144 192])
+            ("maybe_download" function
+               (:documentation "Download the data from Yann's website, unless it's already here."
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [212 220])
+                    ("work_directory" variable nil (reparse-symbol function_parameters) [222 236]))                  )
+                nil [193 664])
+            ("_read32" function (:arguments 
+              ( ("bytestream" variable nil (reparse-symbol function_parameters) [676 686]))              ) nil [664 796])
+            ("extract_images" function
+               (:documentation "Extract the images into a 4D uint8 numpy array [index, y, x, depth]."
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [815 823]))                  )
+                nil [796 1416])
+            ("dense_to_one_hot" function
+               (:documentation "Convert class labels from scalars to one-hot vectors."
+                :arguments 
+                  ( ("labels_dense" variable nil (reparse-symbol function_parameters) [1437 1449])
+                    ("num_classes" variable nil (reparse-symbol function_parameters) [1451 1462]))                  )
+                nil [1416 1768])
+            ("extract_labels" function
+               (:documentation "Extract the labels into a 1D uint8 numpy array [index]."
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [1787 1795])
+                    ("one_hot" variable nil (reparse-symbol function_parameters) [1797 1804]))                  )
+                nil [1768 2319])
+            ("DataSet" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [2401 3091])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3095 3116])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3121 3142])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3147 3173])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3178 3202]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2357 2361])
+                            ("images" variable nil (reparse-symbol function_parameters) [2363 2369])
+                            ("labels" variable nil (reparse-symbol function_parameters) [2371 2377])
+                            ("fake_data" variable nil (reparse-symbol function_parameters) [2379 2388]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2344 3203])
+                    ("images" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3228 3232]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3205 3259])
+                    ("labels" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3284 3288]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3261 3315])
+                    ("num_examples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3346 3350]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3317 3383])
+                    ("epochs_completed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3418 3422]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3385 3459])
+                    ("next_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3476 3480])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [3482 3492])
+                            ("fake_data" variable nil (reparse-symbol function_parameters) [3494 3503]))                          
+                        :documentation "Return the next `batch_size` examples from this data set.")
+                        (reparse-symbol indented_block_body) [3461 4353]))                  
+                :type "class")
+                nil [2319 4353])
+            ("read_data_sets" function (:arguments 
+              ( ("train_dir" variable nil (reparse-symbol function_parameters) [4372 4381])
+                ("fake_data" variable nil (reparse-symbol function_parameters) [4383 4392])
+                ("one_hot" variable nil (reparse-symbol function_parameters) [4400 4407]))              ) nil [4353 5711]))          
+    :file "input_data.py"
+    :pointmax 5711
+    :fsize 5710
+    :lastmodtime '(22251 21544 989698 1000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mnist_beginner.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("input_data" include nil nil [26 43])
+            ("tensorflow" include nil nil [44 67])
+            ("mnist" variable nil nil [96 158])
+            ("x" variable nil nil [171 211])
+            ("W" variable nil nil [231 266])
+            ("b" variable nil nil [267 298])
+            ("y" variable nil nil [313 350])
+            ("y_" variable nil nil [375 414])
+            ("cross_entropy" code nil nil [430 474])
+            ("train_step" variable nil nil [516 592])
+            ("sess" variable nil nil [605 624])
+            ("init" variable nil nil [635 671])
+            ("sess" code nil nil [672 686])
+            ("for" code nil nil [688 876])
+            ("correct_prediction" variable nil nil [887 949])
+            ("accuracy" variable nil nil [950 1013])
+            ("print" code nil nil [1022 1103]))          
+    :file "mnist_beginner.py"
+    :pointmax 1104
+    :fsize 1425
+    :lastmodtime '(22348 48862 877714 825000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!TensorFlow!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

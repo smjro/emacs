@@ -1,0 +1,322 @@
+;; Object ptb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ptb/"
+  :tables (list 
+   (semanticdb-table "reader.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Utilities for parsing PTB text files.\"\"\"" code nil nil [680 723])
+            ("__future__" include nil nil [724 762])
+            ("__future__" include nil nil [763 794])
+            ("__future__" include nil nil [795 832])
+            ("collections" include nil nil [834 852])
+            ("os" include nil nil [853 862])
+            ("numpy" include nil nil [864 882])
+            ("tensorflow" include nil nil [883 906])
+            ("_read_words" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [925 933]))              ) nil [909 1030])
+            ("_build_vocab" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [1049 1057]))              ) nil [1032 1309])
+            ("_file_to_word_ids" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [1333 1341])
+                ("word_to_id" variable nil (reparse-symbol function_parameters) [1343 1353]))              ) nil [1311 1432])
+            ("ptb_raw_data" function
+               (:documentation "Load PTB raw data from data directory \"data_path\".
+
+  Reads PTB text files, converts strings to integer ids,
+  and performs mini-batching of the inputs.
+
+  The PTB dataset comes from Tomas Mikolov's webpage:
+
+  http://www.fit.vutbr.cz/~imikolov/rnnlm/simple-examples.tgz
+
+  Args:
+    data_path: string path to the directory where simple-examples.tgz has
+      been extracted.
+
+  Returns:
+    tuple (train_data, valid_data, test_data, vocabulary)
+    where each of the data objects can be passed to PTBIterator.
+  "
+                :arguments 
+                  ( ("data_path" variable nil (reparse-symbol function_parameters) [1451 1460]))                  )
+                nil [1434 2453])
+            ("ptb_iterator" function
+               (:documentation "Iterate on the raw PTB data.
+
+  This generates batch_size pointers into the raw PTB data, and allows
+  minibatch iteration along these pointers.
+
+  Args:
+    raw_data: one of the raw data outputs from ptb_raw_data.
+    batch_size: int, the batch size.
+    num_steps: int, the number of unrolls.
+
+  Yields:
+    Pairs of the batched data, each a matrix of shape [batch_size, num_steps].
+    The second element of the tuple is the same data time-shifted to the
+    right by one.
+
+  Raises:
+    ValueError: if batch_size or num_steps are too high.
+  "
+                :arguments 
+                  ( ("raw_data" variable nil (reparse-symbol function_parameters) [2472 2480])
+                    ("batch_size" variable nil (reparse-symbol function_parameters) [2482 2492])
+                    ("num_steps" variable nil (reparse-symbol function_parameters) [2494 2503]))                  )
+                nil [2455 3605]))          
+    :file "reader.py"
+    :pointmax 3601
+    :fsize 3604
+    :lastmodtime '(22342 7320 883942 131000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ptb_word_lm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Example / benchmark for building a PTB LSTM model.
+
+Trains the model described in:
+(Zaremba, et. al.) Recurrent Neural Network Regularization
+http://arxiv.org/abs/1409.2329
+
+There are 3 supported model configurations:
+===========================================
+| config | epochs | train | valid  | test
+===========================================
+| small  | 13     | 37.99 | 121.39 | 115.91
+| medium | 39     | 48.45 |  86.16 |  82.07
+| large  | 55     | 37.87 |  82.62 |  78.29
+The exact results may vary depending on the random initialization.
+
+The hyperparameters used in the model:
+- init_scale - the initial scale of the weights
+- learning_rate - the initial value of the learning rate
+- max_grad_norm - the maximum permissible norm of the gradient
+- num_layers - the number of LSTM layers
+- num_steps - the number of unrolled steps of LSTM
+- hidden_size - the number of LSTM units
+- max_epoch - the number of epochs trained with the initial learning rate
+- max_max_epoch - the total number of epochs for training
+- keep_prob - the probability of keeping weights in the dropout layer
+- lr_decay - the decay of the learning rate for each epoch after \"max_epoch\"
+- batch_size - the batch size
+
+The data required for this example is in the data/ dir of the
+PTB dataset from Tomas Mikolov's webpage:
+
+$ wget http://www.fit.vutbr.cz/~imikolov/rnnlm/simple-examples.tgz
+$ tar xvf simple-examples.tgz
+
+To run:
+
+$ python ptb_word_lm.py --data_path=simple-examples/data/
+
+\"\"\"" code nil nil [679 2154])
+            ("__future__" include nil nil [2155 2193])
+            ("__future__" include nil nil [2194 2225])
+            ("__future__" include nil nil [2226 2263])
+            ("time" include nil nil [2265 2276])
+            ("numpy" include nil nil [2278 2296])
+            ("tensorflow" include nil nil [2297 2320])
+            ("tensorflow.models.rnn.ptb" include nil nil [2322 2366])
+            ("flags" variable nil nil [2369 2385])
+            ("logging" variable nil nil [2386 2406])
+            ("flags" code nil nil [2408 2518])
+            ("flags" code nil nil [2519 2570])
+            ("FLAGS" variable nil nil [2572 2591])
+            ("PTBModel" type
+               (:documentation "The PTB model."
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2737 2785])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2790 2835])
+                            ("size" variable nil (reparse-symbol indented_block_body) [2840 2865])
+                            ("vocab_size" variable nil (reparse-symbol indented_block_body) [2870 2900])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2906 2974])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2979 3044])
+                            ("lstm_cell" variable nil (reparse-symbol indented_block_body) [3241 3304])
+                            ("if" code nil (reparse-symbol indented_block_body) [3309 3455])
+                            ("cell" variable nil (reparse-symbol indented_block_body) [3459 3526])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3532 3593])
+                            ("with" code nil (reparse-symbol indented_block_body) [3599 3759])
+                            ("if" code nil (reparse-symbol indented_block_body) [3764 3927])
+                            ("outputs" variable nil (reparse-symbol indented_block_body) [4351 4363])
+                            ("state" variable nil (reparse-symbol indented_block_body) [4368 4395])
+                            ("with" code nil (reparse-symbol indented_block_body) [4400 4644])
+                            ("output" variable nil (reparse-symbol indented_block_body) [4649 4703])
+                            ("softmax_w" variable nil (reparse-symbol indented_block_body) [4708 4768])
+                            ("softmax_b" variable nil (reparse-symbol indented_block_body) [4773 4827])
+                            ("logits" code nil (reparse-symbol indented_block_body) [4832 4881])
+                            ("loss" variable nil (reparse-symbol indented_block_body) [4886 5038])
+                            ("self" code nil (reparse-symbol indented_block_body) [5043 5095])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5100 5125])
+                            ("if" code nil (reparse-symbol indented_block_body) [5131 5164])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5169 5213])
+                            ("tvars" variable nil (reparse-symbol indented_block_body) [5218 5250])
+                            ("grads, _" code nil (reparse-symbol indented_block_body) [5255 5375])
+                            ("optimizer" variable nil (reparse-symbol indented_block_body) [5380 5434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5439 5500]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2657 2661])
+                            ("is_training" variable nil (reparse-symbol function_parameters) [2663 2674])
+                            ("config" variable nil (reparse-symbol function_parameters) [2676 2682]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2644 5453])
+                    ("assign_lr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5470 5474])
+                            ("session" variable nil (reparse-symbol function_parameters) [5476 5483])
+                            ("lr_value" variable nil (reparse-symbol function_parameters) [5485 5493]))                          )
+                        (reparse-symbol indented_block_body) [5456 5542])
+                    ("input_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5572 5576]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5545 5607])
+                    ("targets" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5634 5638]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5610 5666])
+                    ("initial_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5699 5703]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5669 5737])
+                    ("cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5761 5765]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5740 5790])
+                    ("final_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5821 5825]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5793 5857])
+                    ("lr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5879 5883]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5860 5906])
+                    ("train_op" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5934 5938]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5909 5967]))                  
+                :type "class")
+                nil [2594 5967])
+            ("SmallConfig" type
+               (:documentation "Small config."
+                :superclasses ("object")
+                :members 
+                  ( ("init_scale" variable nil (reparse-symbol indented_block_body) [6020 6036])
+                    ("learning_rate" variable nil (reparse-symbol indented_block_body) [6039 6058])
+                    ("max_grad_norm" variable nil (reparse-symbol indented_block_body) [6061 6078])
+                    ("num_layers" variable nil (reparse-symbol indented_block_body) [6081 6095])
+                    ("num_steps" variable nil (reparse-symbol indented_block_body) [6098 6112])
+                    ("hidden_size" variable nil (reparse-symbol indented_block_body) [6115 6132])
+                    ("max_epoch" variable nil (reparse-symbol indented_block_body) [6135 6148])
+                    ("max_max_epoch" variable nil (reparse-symbol indented_block_body) [6151 6169])
+                    ("keep_prob" variable nil (reparse-symbol indented_block_body) [6172 6187])
+                    ("lr_decay" variable nil (reparse-symbol indented_block_body) [6190 6204])
+                    ("batch_size" variable nil (reparse-symbol indented_block_body) [6207 6222])
+                    ("vocab_size" variable nil (reparse-symbol indented_block_body) [6225 6243]))                  
+                :type "class")
+                nil [5969 6244])
+            ("MediumConfig" type
+               (:documentation "Medium config."
+                :superclasses ("object")
+                :members 
+                  ( ("init_scale" variable nil (reparse-symbol indented_block_body) [6299 6316])
+                    ("learning_rate" variable nil (reparse-symbol indented_block_body) [6319 6338])
+                    ("max_grad_norm" variable nil (reparse-symbol indented_block_body) [6341 6358])
+                    ("num_layers" variable nil (reparse-symbol indented_block_body) [6361 6375])
+                    ("num_steps" variable nil (reparse-symbol indented_block_body) [6378 6392])
+                    ("hidden_size" variable nil (reparse-symbol indented_block_body) [6395 6412])
+                    ("max_epoch" variable nil (reparse-symbol indented_block_body) [6415 6428])
+                    ("max_max_epoch" variable nil (reparse-symbol indented_block_body) [6431 6449])
+                    ("keep_prob" variable nil (reparse-symbol indented_block_body) [6452 6467])
+                    ("lr_decay" variable nil (reparse-symbol indented_block_body) [6470 6484])
+                    ("batch_size" variable nil (reparse-symbol indented_block_body) [6487 6502])
+                    ("vocab_size" variable nil (reparse-symbol indented_block_body) [6505 6523]))                  
+                :type "class")
+                nil [6246 6524])
+            ("LargeConfig" type
+               (:documentation "Large config."
+                :superclasses ("object")
+                :members 
+                  ( ("init_scale" variable nil (reparse-symbol indented_block_body) [6577 6594])
+                    ("learning_rate" variable nil (reparse-symbol indented_block_body) [6597 6616])
+                    ("max_grad_norm" variable nil (reparse-symbol indented_block_body) [6619 6637])
+                    ("num_layers" variable nil (reparse-symbol indented_block_body) [6640 6654])
+                    ("num_steps" variable nil (reparse-symbol indented_block_body) [6657 6671])
+                    ("hidden_size" variable nil (reparse-symbol indented_block_body) [6674 6692])
+                    ("max_epoch" variable nil (reparse-symbol indented_block_body) [6695 6709])
+                    ("max_max_epoch" variable nil (reparse-symbol indented_block_body) [6712 6730])
+                    ("keep_prob" variable nil (reparse-symbol indented_block_body) [6733 6749])
+                    ("lr_decay" code nil (reparse-symbol indented_block_body) [6752 6771])
+                    ("batch_size" variable nil (reparse-symbol indented_block_body) [6774 6789])
+                    ("vocab_size" variable nil (reparse-symbol indented_block_body) [6792 6810]))                  
+                :type "class")
+                nil [6526 6811])
+            ("TestConfig" type
+               (:documentation "Tiny config, for testing."
+                :superclasses ("object")
+                :members 
+                  ( ("init_scale" variable nil (reparse-symbol indented_block_body) [6875 6891])
+                    ("learning_rate" variable nil (reparse-symbol indented_block_body) [6894 6913])
+                    ("max_grad_norm" variable nil (reparse-symbol indented_block_body) [6916 6933])
+                    ("num_layers" variable nil (reparse-symbol indented_block_body) [6936 6950])
+                    ("num_steps" variable nil (reparse-symbol indented_block_body) [6953 6966])
+                    ("hidden_size" variable nil (reparse-symbol indented_block_body) [6969 6984])
+                    ("max_epoch" variable nil (reparse-symbol indented_block_body) [6987 7000])
+                    ("max_max_epoch" variable nil (reparse-symbol indented_block_body) [7003 7020])
+                    ("keep_prob" variable nil (reparse-symbol indented_block_body) [7023 7038])
+                    ("lr_decay" variable nil (reparse-symbol indented_block_body) [7041 7055])
+                    ("batch_size" variable nil (reparse-symbol indented_block_body) [7058 7073])
+                    ("vocab_size" variable nil (reparse-symbol indented_block_body) [7076 7094]))                  
+                :type "class")
+                nil [6813 7095])
+            ("run_epoch" function
+               (:documentation "Runs the model on the given data."
+                :arguments 
+                  ( ("session" variable nil (reparse-symbol function_parameters) [7111 7118])
+                    ("m" variable nil (reparse-symbol function_parameters) [7120 7121])
+                    ("data" variable nil (reparse-symbol function_parameters) [7123 7127])
+                    ("eval_op" variable nil (reparse-symbol function_parameters) [7129 7136])
+                    ("verbose" variable nil (reparse-symbol function_parameters) [7138 7145]))                  )
+                nil [7097 8018])
+            ("get_config" function nil nil [8020 8323])
+            ("main" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [8334 8335]))              ) nil [8325 9915])
+            ("if" code nil nil [9917 9959]))          
+    :file "ptb_word_lm.py"
+    :pointmax 10007
+    :fsize 9958
+    :lastmodtime '(22346 37681 771825 996000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!TensorFlow!tensorflow!tensorflow!models!rnn!ptb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

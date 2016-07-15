@@ -1,0 +1,29 @@
+;; Object program/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "program/"
+  :tables (list 
+   (semanticdb-table "Makefile~"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [27 36])
+            ("CXX" variable (:default-value ("g++")) nil [36 46])
+            ("CXXFLAGS" variable (:default-value ("`pkg-config --cflags opencv`")) nil [46 86])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs opencv`")) nil [86 123])
+            ("CFLAGS" variable (:default-value ("-Wall" "-I./wrapplot" "-I./wrapunix" "-g")) nil [123 167])
+            ("OPENCV_INC" variable (:default-value ("-I/usr/local/include/opencv")) nil [167 208])
+            ("OPT_FLAG" variable (:default-value ("-O3" "-mcpu=i686")) nil [208 234])
+            ("CPPFLAGS" variable (:default-value ("-g" "$(OPT_FLAG)" "$(OPENCV_INC)" "$(IPL_INC)" "$(CXXFLAGS)" "$(LDFLAGS)")) nil [234 308])
+            ("LDLIBS" variable (:default-value ("$(IPL_LIB)" "$(GPG_LIB)" "-lm")) nil [308 343])
+            ("all" function (:arguments ("$(TARGET)")) nil [344 359])
+            ("clean" function nil nil [360 390]))          
+    :file "Makefile~"
+    :pointmax 392
+    :fsize 409
+    :lastmodtime '(21799 34521 60913 719000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!thesis!m1!last!program!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

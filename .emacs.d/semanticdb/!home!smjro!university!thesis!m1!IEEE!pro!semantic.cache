@@ -1,0 +1,57 @@
+;; Object pro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pro/"
+  :tables (list 
+   (semanticdb-table "mpc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MatCreate" function
+               (:arguments 
+                  ( ("mc" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16 27])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [28 34])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [35 41]))                  
+                :type "void")
+                nil [1 160])
+            ("MatInit" function
+               (:arguments 
+                  ( ("mc" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [174 185]))                  
+                :type "int")
+                nil [162 2115]))          
+    :file "mpc.c"
+    :pointmax 2116
+    :fsize 2115
+    :lastmodtime '(21799 34521 296913 722000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpc.h" include nil nil [1 16])
+            ("unistd.h" include (:system-flag t) nil [17 35])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [46 51]))                  
+                :type "int")
+                nil [37 5239]))          
+    :file "pro.c"
+    :pointmax 5240
+    :fsize 5417
+    :lastmodtime '(21799 34521 288913 722000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mpc.h"
+    :file "mpc.h"
+    :fsize 10296
+    :lastmodtime '(21799 34521 352913 723000)
+    )
+   )
+  :file "!home!smjro!university!thesis!m1!IEEE!pro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

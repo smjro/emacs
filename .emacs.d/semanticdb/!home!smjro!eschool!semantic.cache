@@ -1,0 +1,73 @@
+;; Object eschool/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "eschool/"
+  :tables (list 
+   (semanticdb-table "sample2_2.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [29 34]))                  
+                :type "int")
+                nil [20 411]))          
+    :file "sample2_2.cpp"
+    :pointmax 412
+    :fsize 411
+    :lastmodtime '(22112 24279 905031 821000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sample2_3.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [29 34]))                  
+                :type "int")
+                nil [20 386]))          
+    :file "sample2_3.cpp"
+    :pointmax 393
+    :fsize 386
+    :lastmodtime '(22112 24982 513041 150000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sample3_5.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 210]))          
+    :file "sample3_5.cpp"
+    :pointmax 209
+    :fsize 210
+    :lastmodtime '(22171 5547 5580 829000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CXX" variable (:default-value ("g++")) nil [1 9])
+            ("%.o" function (:arguments ("%.cpp")) nil [107 132])
+            ("all" function (:arguments ("$(PROG)")) nil [133 146])
+            ("clean" function nil nil [147 177])
+            ("CC" variable (:default-value ("g++")) nil [246 246])
+            ("CXX" variable (:default-value ("g++")) nil [246 246])
+            ("CXXFLAGS" variable (:default-value ("`pkg-config --cflags opencv`")) nil [246 246])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs opencv`")) nil [246 246])
+            ("CFLAGS" variable (:default-value ("-Wall" "-I./wrapplot" "-I./wrapunix" "-g")) nil [246 246])
+            ("all" function (:arguments ("$(TARGET)")) nil [246 246]))          
+    :file "Makefile"
+    :pointmax 435
+    :fsize 176
+    :lastmodtime '(22171 5542 777580 920000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!eschool!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

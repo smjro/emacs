@@ -1,0 +1,71 @@
+;; Object cpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cpp/"
+  :tables (list 
+   (semanticdb-table "output.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("main" function (:type "int") nil [43 240]))          
+    :file "output.cpp"
+    :pointmax 241
+    :fsize 240
+    :lastmodtime '(21906 729 208519 214000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "manipulator.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("iomanip" include (:system-flag t) nil [21 39])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("main" function (:type "int") nil [62 609]))          
+    :file "manipulator.cpp"
+    :pointmax 610
+    :fsize 629
+    :lastmodtime '(21906 2119 824571 462000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "input.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("main" function (:type "int") nil [43 552]))          
+    :file "input.cpp"
+    :pointmax 553
+    :fsize 674
+    :lastmodtime '(21906 3050 460606 428000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "file.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("fstream.h" include (:system-flag t) nil [21 41])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [42 62])
+            ("main" function (:type "int") nil [64 390]))          
+    :file "file.cpp"
+    :pointmax 370
+    :fsize 540
+    :lastmodtime '(21906 4400 284657 143000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!program!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

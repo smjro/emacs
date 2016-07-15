@@ -1,0 +1,160 @@
+;; Object tokoro10g-quadruptor-59c72cf4938f/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tokoro10g-quadruptor-59c72cf4938f/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SHELL" variable (:default-value ("/bin/sh")) nil [1 17])
+            ("TARGET_ARCH" variable (:default-value ("-mcpu=cortex-m3" "-mthumb")) nil [17 57])
+            ("INCLUDE_DIRS" variable (:default-value ("-I" "../../stm32plus/lib/include" "-I" "../../stm32plus/lib" "-I" "/opt/cross/arm-none-eabi-x-tools/arm-none-eabi/include" "-I" "/opt/cross/arm-none-eabi-x-tools/arm-none-eabi/include/c++/4.8.1/" "-I" "/opt/cross/arm-none-eabi-x-tools/arm-none-eabi/include/c++/4.8.1/arm-none-eabi/" "-I" "../../Libraries/CMSIS/Device/ST/STM32F10x/" "-I" "../../Libraries/CMSIS/Include" "-I" "../../Libraries/")) nil [57 478])
+            ("STARTUP_DIR" variable (:default-value ("./system/f1md/")) nil [478 507])
+            ("BOARD_OPTS" variable (:default-value ("-DHSE_VALUE=\\(\\(uint32_t\\)12000000\\)")) nil [507 557])
+            ("FIRMWARE_OPTS" variable (:default-value ("-DSTM32PLUS_F1_MD")) nil [557 591])
+            ("COMPILE_OPTS" variable (:default-value ("-std=gnu++11" "-Os" "-g3" "-ffunction-sections" "-fpermissive" "-fdata-sections" "-fsigned-char" "-fno-rtti" "-fexceptions" "-Wall" "-fmessage-length=0" "$(INCLUDE_DIRS)" "$(BOARD_OPTS)" "$(FIRMWARE_OPTS)")) nil [591 786])
+            ("TOOLDIR" variable (:default-value ("/opt/cross/arm-none-eabi-x-tools/bin/")) nil [787 835])
+            ("CC" variable (:default-value ("$(TOOLDIR)arm-none-eabi-g++")) nil [835 873])
+            ("CXX" variable (:default-value ("$(CC)")) nil [873 885])
+            ("AS" variable (:default-value ("$(CC)")) nil [885 901])
+            ("LD" variable (:default-value ("$(CC)")) nil [901 917])
+            ("AR" variable (:default-value ("$(TOOLDIR)arm-none-eabi-ar")) nil [917 954])
+            ("OBJCOPY" variable (:default-value ("$(TOOLDIR)arm-none-eabi-objcopy")) nil [954 996])
+            ("CFLAGS" variable (:default-value ("$(COMPILE_OPTS)")) nil [996 1022])
+            ("CXXFLAGS" variable (:default-value ("$(COMPILE_OPTS)" "-include" "stdint.h" "-include" "../../stm32plus/lib/include/stl/stm32_config.h")) nil [1022 1122])
+            ("ASFLAGS" variable (:default-value ("-x" "assembler-with-cpp" "-c" "$(TARGET_ARCH)" "$(COMPILE_OPTS)")) nil [1122 1189])
+            ("LDFLAGS" variable (:default-value ("-Wl,--gc-sections,-Map=bin/main.map,-cref" "-T" "$(STARTUP_DIR)Linker.ld" "$(INCLUDE_DIRS)" "-lstm32plus-master-f1md-small" "-L" "../../stm32plus/lib/build/small-f1md-12000000" "-nostartfiles")) nil [1189 1377])
+            ("all" function (:arguments ("startup" "bin/main.hex")) nil [1378 1404])
+            ("bin/main.hex" function (:arguments ("$(patsubst %.c,%.o,$(wildcard *.c))" "$(patsubst %.cpp,%.o,$(wildcard *.cpp))" "$(STARTUP_DIR)Startup.o" "$(STARTUP_DIR)System.o" "$(STARTUP_DIR)../LibraryHacks.o" "$(STARTUP_DIR)../syscalls.o" "../../stm32plus/lib/build/small-f1md-12000000/libstm32plus-master-f1md-small.a")) nil [1455 1831])
+            ("startup" function nil nil [1832 1912])
+            ("clean" function nil nil [1913 1944])
+            ("small" function nil nil [1944 1951]))          
+    :file "Makefile"
+    :pointmax 2244
+    :fsize 2243
+    :lastmodtime '(21291 32444 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "quadruptor.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("config/stm32plus.h" include nil nil [1 30])
+            ("config/gpio.h" include nil nil [31 55])
+            ("config/i2c.h" include nil nil [56 79])
+            ("config/spi.h" include nil nil [80 103])
+            ("config/timing.h" include nil nil [104 130])
+            ("config/usart.h" include nil nil [131 156])
+            ("devices/mpu6050.h" include nil nil [158 186])
+            ("devices/ms5611.h" include nil nil [187 214])
+            ("devices/hmc5883l.h" include nil nil [215 244])
+            ("machine/comm_machine.h" include nil nil [246 279])
+            ("machine/eye.h" include nil nil [280 304])
+            ("machine/motor.h" include nil nil [305 331])
+            ("Eigen/Dense" include (:system-flag t) nil [333 355])
+            ("utils/madgwickfilter.h" include nil nil [356 389])
+            ("stm32plus" using (:type ("stm32plus" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [391 417])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [418 440])
+            ("spowf" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("f" variable (:type "float") (reparse-symbol arg-sub-list) [461 469]))                  
+                :type "float")
+                nil [442 503])
+            ("taylorCos" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("f" variable (:type "float") (reparse-symbol arg-sub-list) [528 536]))                  
+                :type "float")
+                nil [505 559])
+            ("taylorSin" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("f" variable (:type "float") (reparse-symbol arg-sub-list) [584 592]))                  
+                :type "float")
+                nil [561 607])
+            ("Core" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [622 630])
+                    ("" type
+                       (:members 
+                          ( ("THRESHOLD_NO_CONTROL" variable
+                               (:constant-flag t
+                                :default-value (664 666)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [643 666]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [633 671])
+                    ("thrust" variable (:type "int") (reparse-symbol classsubparts) [675 686])
+                    ("roll" variable (:type "int") (reparse-symbol classsubparts) [689 698])
+                    ("pitch" variable (:type "int") (reparse-symbol classsubparts) [701 711])
+                    ("yaw" variable (:type "long") (reparse-symbol classsubparts) [714 723])
+                    ("estop" variable (:type "bool") (reparse-symbol classsubparts) [726 737])
+                    ("noControlCount" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [741 764])
+                    ("eyes" variable (:type ("Eyes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [768 778])
+                    ("motors" variable (:type ("Motors" type (:type "class") nil nil)) (reparse-symbol classsubparts) [781 795])
+                    ("i2cParams" variable (:type ("Parameters" type (:type "class") nil nil)) (reparse-symbol classsubparts) [868 889])
+                    ("mpu6050" variable (:type ("MPU6050" type
+                         (:template-specifier 
+                            ( ("I2C1_Default" type nil nil nil)
+                              ("0"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [892 959])
+                    ("ms5611" variable (:type ("MS5611" type
+                         (:template-specifier 
+                            ( ("I2C1_Default" type nil nil nil)
+                              ("0"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [962 1027])
+                    ("hmc5883l" variable (:type ("HMC5883L" type
+                         (:template-specifier 
+                            ( ("I2C1_Default" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1030 1098])
+                    ("nrfSysPort" variable (:type ("GpioB" type
+                         (:template-specifier 
+                            ( ("DefaultDigitalOutputFeature" type nil nil nil)
+                              ("DigitalInputFeature" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1120 1227])
+                    ("csnPin" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1230 1254])
+                    ("cePin" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1230 1254])
+                    ("exti" variable (:type ("Exti11" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1257 1269])
+                    ("spiParams" variable (:type ("Parameters" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1281 1302])
+                    ("comm" variable (:type ("CommMachine" type
+                         (:template-specifier 
+                            ( ("Spi2" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1306 1332])
+                    ("usart1" variable (:type ("Usart1" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1336 1352])
+                    ("_usartos" variable (:type ("UsartPollingOutputStream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1355 1389])
+                    ("os1" variable (:type ("TextOutputStream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1392 1413])
+                    ("public" label nil (reparse-symbol classsubparts) [1415 1422])
+                    ("Core" function
+                       (:constructor-flag t
+                        :type ("Core" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1425 2266])
+                    ("run" function (:type "void") (reparse-symbol classsubparts) [2269 7890])
+                    ("nRFIRQHandler" function
+                       (:arguments 
+                          ( ("extiLine" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7912 7929]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7893 7996]))                  
+                :type "class")
+                nil [609 7999])
+            ("main" function (:type "int") nil [8001 8085]))          
+    :file "quadruptor.cpp"
+    :pointmax 8086
+    :fsize 8085
+    :lastmodtime '(21914 5538 580951 379000)
+    :unmatched-syntax '((punctuation 1280 . 1281) (punctuation 1279 . 1280) (punctuation 1278 . 1279) (punctuation 1277 . 1278) (symbol 1273 . 1277) (punctuation 867 . 868) (punctuation 866 . 867) (punctuation 865 . 866) (symbol 832 . 865) (punctuation 831 . 832) (symbol 819 . 831) (punctuation 867 . 868) (punctuation 866 . 867) (punctuation 865 . 866) (symbol 832 . 865) (punctuation 831 . 832) (symbol 819 . 831) (punctuation 1277 . 1278) (punctuation 1276 . 1277) (punctuation 1275 . 1276) (punctuation 1274 . 1275) (symbol 1270 . 1274) (punctuation 864 . 865) (punctuation 863 . 864) (punctuation 862 . 863) (symbol 829 . 862) (punctuation 828 . 829) (symbol 816 . 828))
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!m2!master_thesis!tokoro10g-quadruptor-59c72cf4938f!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

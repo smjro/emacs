@@ -1,0 +1,380 @@
+;; Object devices/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "devices/"
+  :tables (list 
+   (semanticdb-table "nrf24l01p.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("config/stm32plus.h" include nil nil [1 30])
+            ("config/spi.h" include nil nil [31 54])
+            ("config/timing.h" include nil nil [55 81])
+            ("config/gpio.h" include nil nil [82 106])
+            ("config/event.h" include nil nil [107 132])
+            ("config/nvic.h" include nil nil [133 157])
+            ("stm32plus" using (:type ("stm32plus" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [159 185])
+            ("nRF24L01P" type
+               (:template 
+                  ( ("TSpi" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [240 247])
+                    ("" type
+                       (:members 
+                          ( ("REG_CONFIG" variable
+                               (:constant-flag t
+                                :default-value (268 272)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [257 272])
+                            ("REG_EN_AA" variable
+                               (:constant-flag t
+                                :default-value (286 290)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [276 290])
+                            ("REG_EN_RXADDR" variable
+                               (:constant-flag t
+                                :default-value (308 312)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [294 312])
+                            ("REG_SETUP_AW" variable
+                               (:constant-flag t
+                                :default-value (329 333)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [316 333])
+                            ("REG_SETUP_RETR" variable
+                               (:constant-flag t
+                                :default-value (352 356)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [337 356])
+                            ("REG_RF_CH" variable
+                               (:constant-flag t
+                                :default-value (370 374)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [360 374])
+                            ("REG_RF_SETUP" variable
+                               (:constant-flag t
+                                :default-value (391 395)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [378 395])
+                            ("REG_STATUS" variable
+                               (:constant-flag t
+                                :default-value (410 414)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [399 414])
+                            ("REG_OBSERVE_TX" variable
+                               (:constant-flag t
+                                :default-value (433 437)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [418 437])
+                            ("REG_CD" variable
+                               (:constant-flag t
+                                :default-value (448 452)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [441 452])
+                            ("REG_RX_ADDR_P0" variable
+                               (:constant-flag t
+                                :default-value (471 475)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [456 475])
+                            ("REG_RX_ADDR_P1" variable
+                               (:constant-flag t
+                                :default-value (494 498)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [479 498])
+                            ("REG_RX_ADDR_P2" variable
+                               (:constant-flag t
+                                :default-value (517 521)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [502 521])
+                            ("REG_RX_ADDR_P3" variable
+                               (:constant-flag t
+                                :default-value (540 544)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [525 544])
+                            ("REG_RX_ADDR_P4" variable
+                               (:constant-flag t
+                                :default-value (563 567)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [548 567])
+                            ("REG_RX_ADDR_P5" variable
+                               (:constant-flag t
+                                :default-value (586 590)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [571 590])
+                            ("REG_TX_ADDR" variable
+                               (:constant-flag t
+                                :default-value (606 610)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [594 610])
+                            ("REG_RX_PW_P0" variable
+                               (:constant-flag t
+                                :default-value (627 631)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [614 631])
+                            ("REG_RX_PW_P1" variable
+                               (:constant-flag t
+                                :default-value (648 652)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [635 652])
+                            ("REG_RX_PW_P2" variable
+                               (:constant-flag t
+                                :default-value (669 673)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [656 673])
+                            ("REG_RX_PW_P3" variable
+                               (:constant-flag t
+                                :default-value (690 694)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [677 694])
+                            ("REG_RX_PW_P4" variable
+                               (:constant-flag t
+                                :default-value (711 715)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [698 715])
+                            ("REG_RX_PW_P5" variable
+                               (:constant-flag t
+                                :default-value (732 736)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [719 736])
+                            ("REG_FIFO_STATUS" variable
+                               (:constant-flag t
+                                :default-value (756 760)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [740 760])
+                            ("REG_DYNPD" variable
+                               (:constant-flag t
+                                :default-value (774 778)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [764 778])
+                            ("REG_FEATURE" variable
+                               (:constant-flag t
+                                :default-value (794 798)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [782 798]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [249 803])
+                    ("" type
+                       (:members 
+                          ( ("CMD_R_REGISTER" variable
+                               (:constant-flag t
+                                :default-value (828 832)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [813 832])
+                            ("CMD_W_REGISTER" variable
+                               (:constant-flag t
+                                :default-value (851 855)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [836 855])
+                            ("CMD_R_RX_PAYLOAD" variable
+                               (:constant-flag t
+                                :default-value (876 880)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [859 880])
+                            ("CMD_W_TX_PAYLOAD" variable
+                               (:constant-flag t
+                                :default-value (901 905)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [884 905])
+                            ("CMD_FLUSH_TX" variable
+                               (:constant-flag t
+                                :default-value (922 926)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [909 926])
+                            ("CMD_FLUSH_RX" variable
+                               (:constant-flag t
+                                :default-value (943 947)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [930 947])
+                            ("CMD_REUSE_TX_PL" variable
+                               (:constant-flag t
+                                :default-value (967 971)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [951 971])
+                            ("CMD_R_RX_PL_WID" variable
+                               (:constant-flag t
+                                :default-value (991 995)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [975 995])
+                            ("CMD_W_ACK_PAYLOAD" variable
+                               (:constant-flag t
+                                :default-value (1017 1021)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [999 1021])
+                            ("CMD_W_TX_PAYLOAD_NOACK" variable
+                               (:constant-flag t
+                                :default-value (1048 1052)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1025 1052])
+                            ("CMD_NOP" variable
+                               (:constant-flag t
+                                :default-value (1064 1068)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1056 1068]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [805 1072])
+                    ("" type
+                       (:members 
+                          ( ("STATUS_RX_DR" variable
+                               (:constant-flag t
+                                :default-value (1095 1099)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1082 1099])
+                            ("STATUS_TX_DS" variable
+                               (:constant-flag t
+                                :default-value (1116 1120)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1103 1120])
+                            ("STATUS_MAX_RT" variable
+                               (:constant-flag t
+                                :default-value (1138 1142)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1124 1142]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1074 1146])
+                    ("nRF24L01P" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("params" variable
+                               (:reference 1
+                                :typemodifiers ("typename")
+                                :type ("TSpi::Parameters" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1158 1192])
+                            ("_ce" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1192 1207])
+                            ("_csn" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1207 1223]))                          
+                        :type ("nRF24L01P" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1148 1449])
+                    ("setCEState" function
+                       (:arguments 
+                          ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [1467 1478]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1451 1636])
+                    ("setCSNState" function
+                       (:arguments 
+                          ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [1655 1666]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1638 1825])
+                    ("writeCmd" function
+                       (:arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1841 1853])
+                            ("val" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1853 1865]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1827 2018])
+                    ("writeCmd" function
+                       (:arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2034 2046])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2046 2059])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2059 2071]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2020 2225])
+                    ("writeReg" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2248 2260])
+                            ("val" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2260 2272]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2227 2323])
+                    ("writeReg" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2346 2358])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2358 2371])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2371 2383]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2325 2438])
+                    ("readCmd" function
+                       (:arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2453 2465])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2465 2478])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2478 2490]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2440 2616])
+                    ("readCmd" function
+                       (:arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2634 2646]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2618 2803])
+                    ("readReg" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2825 2837])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2837 2850])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2850 2862]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2805 2903])
+                    ("readReg" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("reg" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2928 2940]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2905 2980])
+                    ("selectRxMode" function
+                       (:arguments 
+                          ( ("address" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3000 3023])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3023 3035]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2982 3177])
+                    ("selectTxMode" function
+                       (:arguments 
+                          ( ("address" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3197 3220])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3220 3233])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3233 3245]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3179 3495])
+                    ("clearFlag" function (:type "void") (reparse-symbol classsubparts) [3497 3546])
+                    ("getStatus" function (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3548 3641])
+                    ("flushTx" function (:type "void") (reparse-symbol classsubparts) [3643 3693])
+                    ("flushRx" function (:type "void") (reparse-symbol classsubparts) [3695 3745])
+                    ("readPayload" function
+                       (:arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3764 3777])
+                            ("len" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3777 3789]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3747 3830])
+                    ("private" label nil (reparse-symbol classsubparts) [3831 3839])
+                    ("ce" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3841 3855])
+                    ("csn" variable (:type ("GpioPinRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3857 3872]))                  
+                :superclasses 
+                  ( ("TSpi" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [187 3875]))          
+    :file "nrf24l01p.h"
+    :pointmax 3876
+    :fsize 3875
+    :lastmodtime '(21291 32444 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!m2!master_thesis!tokoro10g-quadruptor-59c72cf4938f!devices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

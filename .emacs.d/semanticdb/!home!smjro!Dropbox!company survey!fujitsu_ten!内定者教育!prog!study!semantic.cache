@@ -1,0 +1,458 @@
+;; Object study/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "study/"
+  :tables (list 
+   (semanticdb-table "pro3_4.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("math.h" include (:system-flag t) nil [20 37])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [48 53]))                  
+                :type "int")
+                nil [39 399]))          
+    :file "pro3_4.cpp"
+    :pointmax 400
+    :fsize 467
+    :lastmodtime '(22221 1771 716100 516000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 263]))          
+    :file "pro4_1.cpp"
+    :pointmax 264
+    :fsize 263
+    :lastmodtime '(22221 3032 648073 446000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_2.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 318]))          
+    :file "pro4_2.cpp"
+    :pointmax 319
+    :fsize 318
+    :lastmodtime '(22221 3479 744063 848000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_3.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 305]))          
+    :file "pro4_3.cpp"
+    :pointmax 306
+    :fsize 305
+    :lastmodtime '(22221 5316 692024 412000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro5_1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("data" type
+               (:members 
+                  ( ("no" variable (:type "int") (reparse-symbol classsubparts) [36 43])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [46 60])
+                    ("sex" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [63 76])
+                    ("height" variable (:type "float") (reparse-symbol classsubparts) [79 92])
+                    ("weight" variable (:type "float") (reparse-symbol classsubparts) [95 108]))                  
+                :type "struct")
+                nil [21 111])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [122 127]))                  
+                :type "int")
+                nil [113 637]))          
+    :file "pro5_1.cpp"
+    :pointmax 638
+    :fsize 761
+    :lastmodtime '(22221 22177 779662 432000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro5_2.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("N" variable (:constant-flag t) nil [46 47])
+            ("N" variable (:constant-flag t) nil [46 47])
+            ("N" variable (:constant-flag t) nil [46 47])
+            ("math.h" include (:system-flag t) nil [20 37])
+            ("N" variable (:constant-flag t) nil [46 47])
+            ("data" type
+               (:members 
+                  ( ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [66 80])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [83 94]))                  
+                :type "struct")
+                nil [51 97])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [108 113]))                  
+                :type "int")
+                nil [99 742]))          
+    :file "pro5_2.cpp"
+    :pointmax 743
+    :fsize 742
+    :lastmodtime '(22221 24043 95622 387000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("N" . ((number "5" 48 . 49)))
+          )
+
+    )
+   (semanticdb-table "pro5_3.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("math.h" include (:system-flag t) nil [20 37])
+            ("N" variable (:constant-flag t) nil [46 47])
+            ("data" type
+               (:members 
+                  ( ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [66 80])
+                    ("sex" variable (:type "char") (reparse-symbol classsubparts) [83 92])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [95 106]))                  
+                :type "struct")
+                nil [51 109])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [120 125]))                  
+                :type "int")
+                nil [111 741]))          
+    :file "pro5_3.cpp"
+    :pointmax 742
+    :fsize 741
+    :lastmodtime '(22221 29029 55515 347000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("N" . ((number "5" 48 . 49)))
+          )
+
+    )
+   (semanticdb-table "pro4_4.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 248]))          
+    :file "pro4_4.cpp"
+    :pointmax 249
+    :fsize 248
+    :lastmodtime '(22221 28867 775518 809000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_5.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 344]))          
+    :file "pro4_5.cpp"
+    :pointmax 345
+    :fsize 344
+    :lastmodtime '(22221 29232 299510 983000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_6.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 328]))          
+    :file "pro4_6.cpp"
+    :pointmax 329
+    :fsize 328
+    :lastmodtime '(22221 29503 903505 153000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_7.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 248]))          
+    :file "pro4_7.cpp"
+    :pointmax 249
+    :fsize 248
+    :lastmodtime '(22221 45217 867167 800000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_8.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 346]))          
+    :file "pro4_8.cpp"
+    :pointmax 347
+    :fsize 346
+    :lastmodtime '(22221 47017 59129 174000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro4_9.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30 35]))                  
+                :type "int")
+                nil [21 259]))          
+    :file "pro4_9.cpp"
+    :pointmax 260
+    :fsize 259
+    :lastmodtime '(22221 49128 591083 843000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro6_1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("star" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [31 35]))                  
+                :type "void")
+                nil [21 36])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [47 52]))                  
+                :type "int")
+                nil [38 132])
+            ("star" function
+               (:arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [144 152]))                  
+                :type "void")
+                nil [134 212]))          
+    :file "pro6_1.cpp"
+    :pointmax 213
+    :fsize 212
+    :lastmodtime '(22222 19140 94320 698000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro6_2.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("exp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [30 34])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [35 39]))                  
+                :type "long")
+                nil [21 40])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [51 56]))                  
+                :type "int")
+                nil [42 191])
+            ("exp" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [202 208])
+                    ("u" variable (:type "int") (reparse-symbol arg-sub-list) [209 215]))                  
+                :type "long")
+                nil [193 340]))          
+    :file "pro6_2.cpp"
+    :pointmax 325
+    :fsize 340
+    :lastmodtime '(22222 20371 766294 256000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro6_3.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("GCD" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [29 33])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [34 38]))                  
+                :type "int")
+                nil [21 39])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [50 55]))                  
+                :type "int")
+                nil [41 219])
+            ("GCD" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [229 235])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [236 242]))                  
+                :type "int")
+                nil [221 330]))          
+    :file "pro6_3.cpp"
+    :pointmax 332
+    :fsize 330
+    :lastmodtime '(22222 21968 194259 983000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("DSIZE" variable (:constant-flag t) nil [28 33])
+            ("Input" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [73 79]))                  
+                :type "void")
+                nil [62 80])
+            ("Output" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [93 99]))                  
+                :type "void")
+                nil [81 100])
+            ("AscendingOrder" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [121 127]))                  
+                :type "void")
+                nil [101 128])
+            ("DescendingOrder" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [150 156]))                  
+                :type "void")
+                nil [129 157])
+            ("Sum" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [167 173]))                  
+                :type "long")
+                nil [158 174])
+            ("Average" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [189 195]))                  
+                :type "float")
+                nil [175 196])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [226 231]))                  
+                :type "int")
+                nil [217 1078])
+            ("Input" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1114 1125]))                  
+                :type "void")
+                nil [1103 1292])
+            ("Output" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1306 1317]))                  
+                :type "void")
+                nil [1294 1457])
+            ("AscendingOrder" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1479 1490]))                  
+                :type "void")
+                nil [1459 1762])
+            ("DescendingOrder" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1785 1796]))                  
+                :type "void")
+                nil [1764 2068])
+            ("Sum" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2079 2090]))                  
+                :type "long")
+                nil [2070 2209])
+            ("Average" function
+               (:arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2225 2236]))                  
+                :type "float")
+                nil [2211 2274]))          
+    :file "test.cpp"
+    :pointmax 2275
+    :fsize 2274
+    :lastmodtime '(22222 37559 225925 270000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DSIZE" . ((number "10" 34 . 36)))
+          )
+
+    )
+   )
+  :file "!home!smjro!Dropbox!company survey!fujitsu_ten!内定者教育!prog!study!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

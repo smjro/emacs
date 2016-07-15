@@ -1,0 +1,103 @@
+;; Object mnist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mnist/"
+  :tables (list 
+   (semanticdb-table "fully_connected_feed.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Trains and Evaluates the MNIST network using a feed dictionary.\"\"\"" code nil nil [679 748])
+            ("__future__" include nil nil [785 823])
+            ("__future__" include nil nil [824 855])
+            ("__future__" include nil nil [856 893])
+            ("os.path" include nil nil [895 909])
+            ("time" include nil nil [910 921])
+            ("numpy" include nil nil [923 935])
+            ("six.moves" include nil nil [936 964])
+            ("tensorflow" include nil nil [1002 1025])
+            ("tensorflow.examples.tutorials.mnist" include nil nil [1027 1085])
+            ("tensorflow.examples.tutorials.mnist" include nil nil [1086 1139])
+            ("flags" variable nil nil [1186 1206])
+            ("FLAGS" variable nil nil [1207 1226])
+            ("flags" code nil nil [1227 1294])
+            ("flags" code nil nil [1295 1369])
+            ("flags" code nil nil [1370 1444])
+            ("flags" code nil nil [1445 1518])
+            ("flags" code nil nil [1519 1641])
+            ("flags" code nil nil [1642 1721])
+            ("flags" code nil nil [1722 1831])
+            ("placeholder_inputs" function
+               (:documentation "Generate placeholder variables to represent the input tensors.
+
+  These placeholders are used as inputs by the rest of the model building
+  code and will be fed from the downloaded data in the .run() loop, below.
+
+  Args:
+    batch_size: The batch size will be baked into both placeholders.
+
+  Returns:
+    images_placeholder: Images placeholder.
+    labels_placeholder: Labels placeholder.
+  "
+                :arguments 
+                  ( ("batch_size" variable nil (reparse-symbol function_parameters) [1857 1867]))                  )
+                nil [1834 2745])
+            ("fill_feed_dict" function
+               (:documentation "Fills the feed_dict for training the given step.
+
+  A feed_dict takes the form of:
+  feed_dict = {
+      <placeholder>: <tensor of values to be passed for placeholder>,
+      ....
+  }
+
+  Args:
+    data_set: The set of images and labels, from input_data.read_data_sets()
+    images_pl: The images placeholder, from placeholder_inputs().
+    labels_pl: The labels placeholder, from placeholder_inputs().
+
+  Returns:
+    feed_dict: The feed dictionary mapping from placeholders to values.
+  "
+                :arguments 
+                  ( ("data_set" variable nil (reparse-symbol function_parameters) [2766 2774])
+                    ("images_pl" variable nil (reparse-symbol function_parameters) [2776 2785])
+                    ("labels_pl" variable nil (reparse-symbol function_parameters) [2787 2796]))                  )
+                nil [2747 3623])
+            ("do_eval" function
+               (:documentation "Runs one evaluation against the full epoch of data.
+
+  Args:
+    sess: The session in which the model has been trained.
+    eval_correct: The Tensor that returns the number of correct predictions.
+    images_placeholder: The images placeholder.
+    labels_placeholder: The labels placeholder.
+    data_set: The set of images and labels to evaluate, from
+      input_data.read_data_sets().
+  "
+                :arguments 
+                  ( ("sess" variable nil (reparse-symbol function_parameters) [3637 3641])
+                    ("eval_correct" variable nil (reparse-symbol function_parameters) [3655 3667])
+                    ("images_placeholder" variable nil (reparse-symbol function_parameters) [3681 3699])
+                    ("labels_placeholder" variable nil (reparse-symbol function_parameters) [3713 3731])
+                    ("data_set" variable nil (reparse-symbol function_parameters) [3745 3753]))                  )
+                nil [3625 4765])
+            ("run_training" function (:documentation "Train MNIST for a number of steps.") nil [4767 8565])
+            ("main" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [8576 8577]))              ) nil [8567 8597])
+            ("if" code nil nil [8599 8641]))          
+    :file "fully_connected_feed.py"
+    :pointmax 8641
+    :fsize 8640
+    :lastmodtime '(22251 20909 329689 561000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mnist.py"
+    :file "mnist.py"
+    :fsize 5286
+    :lastmodtime '(22251 20909 329689 561000)
+    )
+   )
+  :file "!home!smjro!TensorFlow!tensorflow!tensorflow!examples!tutorials!mnist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

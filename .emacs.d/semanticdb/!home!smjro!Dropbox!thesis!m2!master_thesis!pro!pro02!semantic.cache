@@ -1,0 +1,61 @@
+;; Object pro02/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pro02/"
+  :tables (list 
+   (semanticdb-table "pfmpc.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("eigen3/Eigen/Core" include (:system-flag t) nil [21 49])
+            ("eigen3/Eigen/Geometry" include (:system-flag t) nil [50 82])
+            ("PRINT_MAT" variable (:constant-flag t) nil [104 113])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [159 179])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [180 202])
+            ("Sample1" function (:type "void") nil [204 519])
+            ("Sample2" function (:type "void") nil [521 951])
+            ("Sample3" function (:type "void") nil [953 1499])
+            ("Sample4" function (:type "void") nil [1501 1814])
+            ("Sample5" function (:type "void") nil [1816 2323])
+            ("main" function (:type "int") nil [2325 2452]))          
+    :file "pfmpc.cpp"
+    :pointmax 2453
+    :fsize 3168
+    :lastmodtime '(22172 26468 339758 714000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PRINT_MAT" (spp-arg-list ("X") 113 . 116) . 
+              ((symbol "cout" 117 . 121) (punctuation "<" 122 . 123) (punctuation "<" 123 . 124) (punctuation "#" 125 . 126) (symbol "X" 126 . 127) (punctuation "<" 128 . 129) (punctuation "<" 129 . 130) (string "\":\\n\"" 131 . 136) (punctuation "<" 137 . 138) (punctuation "<" 138 . 139) (symbol "X" 140 . 141) (punctuation "<" 142 . 143) (punctuation "<" 143 . 144) (symbol "endl" 145 . 149) (punctuation "<" 150 . 151) (punctuation "<" 151 . 152) (symbol "endl" 153 . 157)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("PROG" variable (:default-value ("pfmpc")) nil [34 47])
+            ("OBJS" variable (:default-value ("$(PROG).o")) nil [47 64])
+            ("CXX" variable (:default-value ("g++")) nil [79 89])
+            ("CFLAGS" variable (:default-value ("-Wall" "-02")) nil [89 108])
+            (".SUFFIXES" function (:arguments (".c" ".o")) nil [132 149])
+            (".PHONY" function (:arguments ("all")) nil [163 175])
+            ("all" function (:arguments ("pfmpc")) nil [175 186])
+            ("$(PROG)" function (:arguments ("$(OBJS)")) nil [201 240])
+            (".c.o" function nil nil [241 271])
+            (".PHONY" function (:arguments ("clean")) nil [287 301])
+            ("clean" function nil nil [301 331]))          
+    :file "Makefile"
+    :pointmax 331
+    :fsize 494
+    :lastmodtime '(21960 49861 0 0)
+    :unmatched-syntax '((shell-command 309 . 330) (bol 308 . 308))
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!m2!master_thesis!pro!pro02!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

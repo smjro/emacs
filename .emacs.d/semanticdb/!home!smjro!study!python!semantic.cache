@@ -1,0 +1,252 @@
+;; Object python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python/"
+  :tables (list 
+   (semanticdb-table "iris_linear_svm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [26 44])
+            ("sklearn.datasets" include nil nil [45 83])
+            ("sklearn.svm" include nil nil [84 117])
+            ("sklearn.cross_validation" include nil nil [118 171])
+            ("sklearn.metrics" include nil nil [172 214])
+            ("dataset" variable nil nil [228 249])
+            ("features" variable nil nil [251 277])
+            ("labels" variable nil nil [278 304])
+            ("features" variable nil nil [305 352])
+            ("labels" variable nil nil [353 394])
+            ("train_features, test_features, train_labels, test_labels" code nil nil [415 523])
+            ("classifier" variable nil nil [534 558])
+            ("classifier" code nil nil [565 609])
+            ("results" variable nil nil [617 660])
+            ("score" variable nil nil [671 715])
+            ("print" code nil nil [716 728]))          
+    :file "iris_linear_svm.py"
+    :pointmax 729
+    :fsize 812
+    :lastmodtime '(22250 3163 500886 983000)
+    :unmatched-syntax '(($EOI 729 . 729) ($EOI 731 . 731) ($EOI 726 . 726) ($EOI 725 . 725))
+    )
+   (semanticdb-table "pdc_linear_svc.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [26 44])
+            ("sklearn.datasets" include nil nil [45 92])
+            ("sklearn.svm" include nil nil [93 126])
+            ("sklearn.metrics" include nil nil [127 169])
+            ("train_dataset" variable nil nil [191 257])
+            ("train_features, train_labels" code nil nil [258 307])
+            ("train_features" variable nil nil [309 378])
+            ("train_labels" variable nil nil [379 432])
+            ("test_dataset" variable nil nil [443 507])
+            ("test_features, test_labels" code nil nil [508 554])
+            ("test_features" variable nil nil [556 623])
+            ("test_labels" variable nil nil [624 675])
+            ("classifier" variable nil nil [683 707])
+            ("classifier" code nil nil [714 758])
+            ("results" variable nil nil [766 809])
+            ("score" variable nil nil [820 864])
+            ("print" code nil nil [865 877]))          
+    :file "pdc_linear_svc.py"
+    :pointmax 878
+    :fsize 945
+    :lastmodtime '(22250 42994 801112 627000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pdc_linear_svc_train.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [26 44])
+            ("sklearn.datasets" include nil nil [45 92])
+            ("sklearn.svm" include nil nil [93 126])
+            ("sklearn.externals" include nil nil [127 163])
+            ("train_dataset" variable nil nil [185 251])
+            ("train_features, train_labels" code nil nil [252 301])
+            ("train_features" variable nil nil [303 372])
+            ("train_labels" variable nil nil [373 426])
+            ("classifier" variable nil nil [434 458])
+            ("classifier" code nil nil [465 509])
+            ("joblib" code nil nil [516 552]))          
+    :file "pdc_linear_svc_train.py"
+    :pointmax 553
+    :fsize 594
+    :lastmodtime '(22250 4605 568906 131000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pdc_linear_svc_test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("numpy" include nil nil [26 44])
+            ("sklearn.datasets" include nil nil [45 92])
+            ("sklearn.externals" include nil nil [93 129])
+            ("sklearn.metrics" include nil nil [130 172])
+            ("test_dataset" variable nil nil [195 259])
+            ("test_features, test_labels" code nil nil [260 306])
+            ("test_features" variable nil nil [308 375])
+            ("test_labels" variable nil nil [376 427])
+            ("classifier" variable nil nil [435 472])
+            ("results" variable nil nil [480 523])
+            ("score" variable nil nil [534 578])
+            ("print" code nil nil [579 591]))          
+    :file "pdc_linear_svc_test.py"
+    :pointmax 626
+    :fsize 645
+    :lastmodtime '(22250 4793 168908 621000)
+    :unmatched-syntax 'nil
+    )
+     (semanticdb-table "train_mnist.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("argparse" include nil nil [26 41])
+            ("numpy" include nil nil [42 60])
+            ("chainer" include nil nil [61 75])
+            ("chainer" include nil nil [76 100])
+            ("chainer.functions" include nil nil [101 130])
+            ("chainer" include nil nil [131 161])
+            ("data" include nil nil [162 173])
+            ("time" include nil nil [174 185])
+            ("parser" variable nil nil [187 257])
+            ("parser" code nil nil [258 382])
+            ("args" variable nil nil [397 423])
+            ("if" code nil nil [424 474])
+            ("np" code nil nil [511 513])
+            ("batchsize" variable nil nil [526 541])
+            ("n_epoch" variable nil nil [542 554])
+            ("n_units" variable nil nil [555 569])
+            ("accfile" variable nil nil [589 613])
+            ("print" code nil nil [628 654])
+            ("mnist" variable nil nil [655 685])
+            ("mnist" variable nil nil [686 734])
+            ("mnist" variable nil nil [735 755])
+            ("mnist" variable nil nil [756 806])
+            ("N" variable nil nil [826 835])
+            ("x_train, x_test" code nil nil [836 882])
+            ("y_train, y_test" code nil nil [883 931])
+            ("N_test" variable nil nil [932 952])
+            ("model" variable nil nil [979 1175])
+            ("if" code nil nil [1216 1289])
+            ("forward" function (:arguments 
+              ( ("x_data" variable nil (reparse-symbol function_parameters) [1302 1308])
+                ("y_data" variable nil (reparse-symbol function_parameters) [1310 1316])
+                ("train" variable nil (reparse-symbol function_parameters) [1318 1323]))              ) nil [1290 1827])
+            ("optimizer" variable nil nil [1874 1903])
+            ("optimizer" code nil nil [1904 1926])
+            ("fp" variable nil nil [1928 1951])
+            ("fp" code nil nil [1952 1986])
+            ("start_time" variable nil nil [2014 2039])
+            ("for" code nil nil [2040 3007])
+            ("end_time" variable nil nil [3008 3031])
+            ("print" code nil nil [3032 3059])
+            ("fp" code nil nil [3061 3071]))          
+    :file "train_mnist.py"
+    :pointmax 7661
+    :fsize 3629
+    :lastmodtime '(22251 15822 833622 23000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "data.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "data.py"
+    :pointmax 1
+    :fsize 2345
+    :lastmodtime '(22250 19230 492797 86000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "net.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("chainer" include nil nil [1 15])
+            ("chainer.functions" include nil nil [16 45])
+            ("chainer.links" include nil nil [46 71])
+            ("MnistMLP" type
+               (:documentation "An example of multi-layer perceptron for MNIST dataset.
+    This is a very simple implementation of an MLP. You can modify this code to
+    build your own neural net.
+    "
+                :superclasses ("chainer.Chain")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [342 507]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [305 309])
+                            ("n_in" variable nil (reparse-symbol function_parameters) [311 315])
+                            ("n_units" variable nil (reparse-symbol function_parameters) [317 324])
+                            ("n_out" variable nil (reparse-symbol function_parameters) [326 331]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [292 508])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [526 530])
+                            ("x" variable nil (reparse-symbol function_parameters) [532 533]))                          )
+                        (reparse-symbol indented_block_body) [513 628]))                  
+                :type "class")
+                nil [74 628])
+            ("MnistMLPParallel" type
+               (:documentation "An example of model-parallel MLP.
+    This chain combines four small MLPs on two different devices.
+    "
+                :superclasses ("chainer.Chain")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [839 1164]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [802 806])
+                            ("n_in" variable nil (reparse-symbol function_parameters) [808 812])
+                            ("n_units" variable nil (reparse-symbol function_parameters) [814 821])
+                            ("n_out" variable nil (reparse-symbol function_parameters) [823 828]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [789 1165])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1183 1187])
+                            ("x" variable nil (reparse-symbol function_parameters) [1189 1190]))                          )
+                        (reparse-symbol indented_block_body) [1170 1529]))                  
+                :type "class")
+                nil [630 1529]))          
+    :file "net.py"
+    :pointmax 1529
+    :fsize 1528
+    :lastmodtime '(22250 19261 880797 503000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "intro.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("matplotlib.pyplot" include nil nil [26 57])
+            ("numpy" include nil nil [58 76])
+            ("sklearn.datasets" include nil nil [77 118])
+            ("chainer" include nil nil [119 178])
+            ("chainer.functions" include nil nil [179 209])
+            ("sys" include nil nil [210 220])
+            ("batchsize" variable nil nil [222 237])
+            ("n_epoch" variable nil nil [239 251])
+            ("u_units" variable nil nil [261 275])
+            ("print" code nil nil [363 390])
+            ("mnist" variable nil nil [391 429])
+            ("mnist" variable nil nil [466 510])
+            ("mnist" variable nil nil [511 529])
+            ("mnist" variable nil nil [578 622])
+            ("draw_digit" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [657 661]))              ) nil [642 1047])
+            ("N" variable nil nil [1167 1176])
+            ("x_train, x_test" code nil nil [1177 1222])
+            ("y_train, y_test" code nil nil [1223 1268])
+            ("N_test" variable nil nil [1269 1289]))          
+    :file "intro.py"
+    :pointmax 1290
+    :fsize 1283
+    :lastmodtime '(22250 44987 609139 88000)
+    :unmatched-syntax '((NAME 578 . 583) ($EOI 622 . 622) (NAME 261 . 268) ($EOI 275 . 275) (NAME 260 . 267) ($EOI 274 . 274) (NAME 256 . 263) ($EOI 270 . 270) (NAME 253 . 260) ($EOI 260 . 260) ($EOI 252 . 252) (NAME 222 . 231) ($EOI 232 . 232))
+    )
+   )
+  :file "!home!smjro!study!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

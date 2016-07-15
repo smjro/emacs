@@ -1,0 +1,22 @@
+;; Object eigen/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "eigen/"
+  :tables (list 
+   (semanticdb-table "sample01.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("Eigen/Core" include (:system-flag t) nil [21 42])
+            ("Eigen/Geometry" include (:system-flag t) nil [43 68])
+            ("main" function (:type "int") nil [70 611]))          
+    :file "sample01.cpp"
+    :pointmax 612
+    :fsize 785
+    :lastmodtime '(21913 54361 137135 494000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!program!eigen!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

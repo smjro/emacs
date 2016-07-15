@@ -1,0 +1,29 @@
+;; Object ex/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ex/"
+  :tables (list 
+   (semanticdb-table "dynamics.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpc.h" include nil nil [1 17])
+            ("count" variable (:constant-flag t) nil [27 32])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [47 52]))                  
+                :type "int")
+                nil [38 122]))          
+    :file "dynamics.c"
+    :pointmax 123
+    :fsize 122
+    :lastmodtime '(21607 35390 354752 965000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("count" . ((number "100" 33 . 36)))
+          )
+
+    )
+   )
+  :file "!home!smjro!program!ex!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

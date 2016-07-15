@@ -1,0 +1,9 @@
+;; Object opencv/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "opencv/"
+  :tables (list 
+     )
+  :file "!home!smjro!study!opencv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

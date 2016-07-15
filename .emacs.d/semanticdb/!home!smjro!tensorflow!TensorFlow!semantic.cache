@@ -1,0 +1,40 @@
+;; Object TensorFlow/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "TensorFlow/"
+  :tables (list 
+   (semanticdb-table "mnist_beginner.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("input_data" include nil nil [26 43])
+            ("tensorflow" include nil nil [44 67])
+            ("mnist" variable nil nil [96 158])
+            ("x" variable nil nil [266 306])
+            ("y_" variable nil nil [360 399])
+            ("W" variable nil nil [450 485])
+            ("b" variable nil nil [486 517])
+            ("y" variable nil nil [532 569])
+            ("cross_entropy" code nil nil [585 629])
+            ("train_step" variable nil nil [671 747])
+            ("sess" variable nil nil [760 779])
+            ("init" variable nil nil [790 826])
+            ("sess" code nil nil [827 841])
+            ("for" code nil nil [843 1006])
+            ("correct_prediction" variable nil nil [1017 1079])
+            ("accuracy" variable nil nil [1080 1143])
+            ("print" code nil nil [1152 1233]))          
+    :file "mnist_beginner.py"
+    :pointmax 1234
+    :fsize 1533
+    :lastmodtime '(22247 47524 929555 390000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "input_data.py"
+    :file "input_data.py"
+    :fsize 5710
+    :lastmodtime '(22226 22860 765255 697000)
+    )
+   )
+  :file "!home!smjro!tensorflow!TensorFlow!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,52 @@
+;; Object pid/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pid/"
+  :tables (list 
+   (semanticdb-table "pid.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("Kp" variable (:constant-flag t) nil [29 31])
+            ("Ki" variable (:constant-flag t) nil [43 45])
+            ("Kd" variable (:constant-flag t) nil [60 62])
+            ("t" variable (:constant-flag t) nil [76 77])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [93 98]))                  
+                :type "int")
+                nil [84 886]))          
+    :file "pid.cpp"
+    :pointmax 887
+    :fsize 906
+    :lastmodtime '(22343 27869 229085 155000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("Kd" . ((number "0.01" 63 . 67)))
+          ("Ki" . ((number "0.001" 46 . 51)))
+          ("Kp" . ((number "10" 32 . 34)))
+          ("t" . ((number "0.01" 78 . 82)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 10])
+            ("CXX" variable (:default-value ("g++")) nil [10 20])
+            ("CFLAGS" variable (:default-value ("-Wall" "-I./wrapplot" "-I./wrapunix" "-g")) nil [99 143])
+            ("OPT_FLAG" variable (:default-value ("-O3" "-mtune=i686")) nil [186 213])
+            ("CPPFLAGS" variable (:default-value ("-g" "$(OPT_FLAG)" "$(CXXFLAGS)" "$(LDFLAGS)")) nil [288 337])
+            ("LDLIBS" variable (:default-value ("$(IPL_LIB)" "$(GPG_LIB)" "-lm" "-lgsl" "-lgslcblas")) nil [337 390])
+            ("all" function (:arguments ("$(TARGET)")) nil [391 406])
+            ("clean" function nil nil [407 437]))          
+    :file "Makefile"
+    :pointmax 440
+    :fsize 439
+    :lastmodtime '(22261 59053 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!study!program!pid!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

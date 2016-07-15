@@ -1,0 +1,67 @@
+;; Object f1md/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "f1md/"
+  :tables (list 
+   (semanticdb-table "System.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("config/stdperiph.h" include nil nil [2851 2880])
+            ("SYSCLK_FREQ_72MHz" variable (:constant-flag t) nil [4360 4377])
+            ("VECT_TAB_OFFSET" variable (:constant-flag t) nil [4882 4897])
+            ("SystemCoreClock" variable (:type ("uint32_t" type (:type "class") nil nil)) nil [6037 6090])
+            ("AHBPrescTable" variable
+               (:dereference 1
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [6301 6378])
+            ("SetSysClock" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6489 6494]))                  
+                :type "void")
+                nil [6465 6495])
+            ("SetSysClockTo72" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6884 6889]))                  
+                :type "void")
+                nil [6856 6890])
+            ("SystemInit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7341 7346]))                  
+                :type "void")
+                nil [7324 9046])
+            ("SystemCoreClockUpdate" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10790 10795]))                  
+                :type "void")
+                nil [10762 13907])
+            ("SetSysClock" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14057 14062]))                  
+                :type "void")
+                nil [14033 14498])
+            ("SetSysClockTo72" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [31359 31364]))                  
+                :type "void")
+                nil [31331 34168]))          
+    :file "System.c"
+    :pointmax 34302
+    :fsize 34723
+    :lastmodtime '(21291 32444 0 0)
+    :unmatched-syntax '((symbol 6297 . 6300) (symbol 6297 . 6300) (number 4899 . 4902) (number 4899 . 4902) (number 4379 . 4387) (symbol 6526 . 6529))
+    :lexical-table 
+        '(("SYSCLK_FREQ_72MHz" . ((number "72000000" 4379 . 4387)))
+          ("VECT_TAB_OFFSET" . ((number "0x0" 4899 . 4902)))
+          )
+
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!m2!master_thesis!tokoro10g-quadruptor-59c72cf4938f!system!f1md!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

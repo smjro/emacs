@@ -1,0 +1,74 @@
+;; Object eigen/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "eigen/"
+  :tables (list 
+   (semanticdb-table "sample01.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Eigen/Core" include (:system-flag t) nil [1 22])
+            ("Eigen/SVD" include (:system-flag t) nil [23 43])
+            ("iostream" include (:system-flag t) nil [44 63])
+            ("stdio.h" include (:system-flag t) nil [64 82])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [84 106])
+            ("Matrixf56" type
+               (:typedef ("Matrix" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil)
+                          ("5")
+                          ("6"))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "Matrix"
+                :type "typedef")
+                nil [108 146])
+            ("SVDOfMatrixf56" type
+               (:typedef ("JacobiSVD" type
+                     (:template-specifier 
+                        ( ("Matrixf56" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "JacobiSVD"
+                :type "typedef")
+                nil [147 191])
+            ("LowRankApprox" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sv" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SVDOfMatrixf56::SingularValuesType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [224 269])
+                    ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SVDOfMatrixf56::MatrixVType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [301 338])
+                    ("rank" variable (:type "int") (reparse-symbol arg-sub-list) [370 379]))                  
+                :type ("Matrixf56" type (:type "class") nil nil))
+                nil [193 523])
+            ("Cosine" function
+               (:arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Matrixf56" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [538 557])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [558 564])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [565 571]))                  
+                :type "float")
+                nil [525 743])
+            ("main" function (:type "int") nil [745 1844]))          
+    :file "sample01.cpp"
+    :pointmax 1826
+    :fsize 1844
+    :lastmodtime '(21913 56529 41111 612000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!eigen!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

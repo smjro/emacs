@@ -1,0 +1,106 @@
+;; Object samples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "samples/"
+  :tables (list 
+   (semanticdb-table "imgread.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [1 30])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [41 50])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51 63]))                  
+                :type "int")
+                nil [32 283]))          
+    :file "imgread.cpp"
+    :pointmax 284
+    :fsize 343
+    :lastmodtime '(22249 61327 164789 93000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 8])
+            ("CXX" variable (:default-value ("g++")) nil [8 16])
+            ("CFLAGS" variable (:default-value ("`pkg-config --cflags opencv`")) nil [28 65])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs opencv`")) nil [65 101])
+            ("LDLIBS" variable (:default-value ("$(IPL_LIB)" "$(GPG_LIB)" "-lm" "-lgsl" "-lgslcblas")) nil [101 153])
+            ("PROG" variable (:default-value ("inpaint_video")) nil [154 173])
+            ("OBJS" variable (:default-value ("$(PROG).o")) nil [173 188])
+            (".PHONY" function (:arguments ("all" "clean")) nil [189 207])
+            ("$(PROG)" function (:arguments ("$(OBJS)")) nil [207 272])
+            ("%.o" function (:arguments ("%.cpp")) nil [273 308])
+            ("all" function (:arguments ("$(PROG)")) nil [309 322])
+            ("clean" function nil nil [323 353]))          
+    :file "Makefile"
+    :pointmax 353
+    :fsize 352
+    :lastmodtime '(22250 595 160852 881000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "videoread.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [1 30])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [41 50])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51 63]))                  
+                :type "int")
+                nil [32 645]))          
+    :file "videoread.cpp"
+    :pointmax 646
+    :fsize 683
+    :lastmodtime '(22402 23331 765774 365000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "inpaint.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [1 30])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [41 50])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51 63]))                  
+                :type "int")
+                nil [32 654]))          
+    :file "inpaint.cpp"
+    :pointmax 655
+    :fsize 746
+    :lastmodtime '(22249 64617 400832 781000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "inpaint_video.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [1 30])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [41 50])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51 63]))                  
+                :type "int")
+                nil [32 1097]))          
+    :file "inpaint_video.cpp"
+    :pointmax 1094
+    :fsize 1243
+    :lastmodtime '(22250 649 100853 597000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!study!opencv!samples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

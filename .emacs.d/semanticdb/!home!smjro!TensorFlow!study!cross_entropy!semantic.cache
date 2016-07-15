@@ -1,0 +1,70 @@
+;; Object cross_entropy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cross_entropy/"
+  :tables (list 
+   (semanticdb-table "cross_entropy.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("math.h" include (:system-flag t) nil [20 37])
+            ("startingWeight" variable (:constant-flag t) nil [47 61])
+            ("startingBias" variable (:constant-flag t) nil [74 86])
+            ("eta" variable (:constant-flag t) nil [99 102])
+            ("flag" variable (:type "int") nil [109 118])
+            ("outputValue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [151 158])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [159 166]))                  
+                :type "double")
+                nil [132 167])
+            ("sigmoid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [183 190]))                  
+                :type "double")
+                nil [168 191])
+            ("derivative" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [210 217]))                  
+                :type "double")
+                nil [192 218])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [229 234]))                  
+                :type "int")
+                nil [220 767])
+            ("outputValue" function
+               (:arguments 
+                  ( ("weight" variable (:type "double") (reparse-symbol arg-sub-list) [788 802])
+                    ("bias" variable (:type "double") (reparse-symbol arg-sub-list) [803 815]))                  
+                :type "double")
+                nil [769 850])
+            ("sigmoid" function
+               (:arguments 
+                  ( ("z" variable (:type "double") (reparse-symbol arg-sub-list) [878 887]))                  
+                :type "double")
+                nil [863 915])
+            ("derivative" function
+               (:arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [1212 1221]))                  
+                :type "double")
+                nil [1194 1281]))          
+    :file "cross_entropy.cpp"
+    :pointmax 1282
+    :fsize 1439
+    :lastmodtime '(22376 28503 627976 116000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("eta" . ((number "0.15" 103 . 107)))
+          ("startingBias" . ((number "2.0" 87 . 90)))
+          ("startingWeight" . ((number "2.0" 62 . 65)))
+          )
+
+    )
+   )
+  :file "!home!smjro!TensorFlow!study!cross_entropy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

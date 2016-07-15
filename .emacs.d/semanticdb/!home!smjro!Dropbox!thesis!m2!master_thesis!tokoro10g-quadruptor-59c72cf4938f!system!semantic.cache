@@ -1,0 +1,184 @@
+;; Object system/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "system/"
+  :tables (list 
+   (semanticdb-table "syscalls.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1966 1985])
+            ("errno.h" include (:system-flag t) nil [1986 2004])
+            ("string.h" include (:system-flag t) nil [2005 2024])
+            ("sys/stat.h" include (:system-flag t) nil [2025 2046])
+            ("sys/types.h" include (:system-flag t) nil [2047 2069])
+            ("_read_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2203 2220])
+                    ("file" variable (:type "int") (reparse-symbol arg-sub-list) [2221 2230])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2231 2242])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2243 2251]))                  )
+                (reparse-symbol extern-c-contents) [2190 2331])
+            ("_lseek_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2426 2443])
+                    ("file" variable (:type "int") (reparse-symbol arg-sub-list) [2444 2453])
+                    ("ptr" variable (:type "int") (reparse-symbol arg-sub-list) [2454 2462])
+                    ("dir" variable (:type "int") (reparse-symbol arg-sub-list) [2463 2471]))                  )
+                (reparse-symbol extern-c-contents) [2412 2533])
+            ("_write_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2628 2645])
+                    ("file" variable (:type "int") (reparse-symbol arg-sub-list) [2646 2655])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2656 2667])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2668 2676]))                  )
+                (reparse-symbol extern-c-contents) [2614 2757])
+            ("_close_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2852 2869])
+                    ("file" variable (:type "int") (reparse-symbol arg-sub-list) [2870 2879]))                  )
+                (reparse-symbol extern-c-contents) [2838 2894])
+            ("asm" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("stack_ptr" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3057 3078])
+            ("_fstat_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3802 3819])
+                    ("file" variable (:type "int") (reparse-symbol arg-sub-list) [3820 3829])
+                    ("st" variable
+                       (:pointer 1
+                        :type ("stat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3830 3847]))                  )
+                (reparse-symbol extern-c-contents) [3788 3941])
+            ("_isatty_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4036 4053])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [4054 4061]))                  )
+                (reparse-symbol extern-c-contents) [4022 4095])
+            ("_open_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("_reent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4110 4127])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4128 4144])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [4145 4155])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4156 4165]))                  )
+                (reparse-symbol extern-c-contents) [4097 4180])
+            ("abort" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4193 4198]))                  )
+                (reparse-symbol extern-c-contents) [4182 4235]))          
+    :file "syscalls.c"
+    :pointmax 4281
+    :fsize 4280
+    :lastmodtime '(21291 32444 0 0)
+    :unmatched-syntax '((string 3072 . 3076) (punctuation 3055 . 3056) (CHAR 3050 . 3054) (REGISTER 3041 . 3049))
+    )
+   (semanticdb-table "LibraryHacks.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdlib" include (:system-flag t) nil [81 99])
+            ("sys/types.h" include (:system-flag t) nil [100 122])
+            ("__gnu_cxx" type
+               (:members 
+                  ( ("__verbose_terminate_handler" function (:type "void") (reparse-symbol namespacesubparts) [197 250]))                  
+                :type "namespace")
+                nil [172 252])
+            ("__cxa_pure_virtual" function (:type "void") nil [319 359])
+            ("__wrap___aeabi_unwind_cpp_pr0" function (:type "void") nil [983 1022])
+            ("__wrap___aeabi_unwind_cpp_pr1" function (:type "void") nil [1034 1073])
+            ("__wrap___aeabi_unwind_cpp_pr2" function (:type "void") nil [1085 1124])
+            ("_end" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [1193 1210])
+            ("_sbrk" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("caddr_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("incr" variable (:type "int") (reparse-symbol arg-sub-list) [1243 1253]))                  )
+                (reparse-symbol extern-c-contents) [1227 1518])
+            ("__dso_handle" variable
+               (:pointer 1
+                :type "void")
+                nil [1522 1543]))          
+    :file "LibraryHacks.cpp"
+    :pointmax 1544
+    :fsize 1543
+    :lastmodtime '(21291 32444 0 0)
+    :unmatched-syntax '((semantic-list 737 . 751) (semantic-list 727 . 736) (semantic-list 725 . 727) (DELETE 719 . 725) (OPERATOR 710 . 718) (VOID 705 . 709) (semantic-list 689 . 703) (semantic-list 679 . 688) (DELETE 673 . 679) (OPERATOR 664 . 672) (VOID 659 . 663) (semantic-list 640 . 657) (semantic-list 621 . 639) (semantic-list 619 . 621) (NEW 616 . 619) (OPERATOR 607 . 615) (punctuation 606 . 607) (VOID 601 . 605) (semantic-list 573 . 599) (semantic-list 559 . 572) (semantic-list 557 . 559) (NEW 554 . 557) (OPERATOR 545 . 553) (punctuation 544 . 545) (VOID 539 . 543) (semantic-list 520 . 537) (semantic-list 501 . 519) (NEW 498 . 501) (OPERATOR 489 . 497) (punctuation 488 . 489) (VOID 483 . 487) (semantic-list 455 . 481) (semantic-list 441 . 454) (NEW 438 . 441) (OPERATOR 429 . 437) (punctuation 428 . 429) (VOID 423 . 427))
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!m2!master_thesis!tokoro10g-quadruptor-59c72cf4938f!system!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

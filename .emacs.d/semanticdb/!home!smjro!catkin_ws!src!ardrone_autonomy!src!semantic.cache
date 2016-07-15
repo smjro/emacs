@@ -1,0 +1,168 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "teleop_twist.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ardrone_autonomy/teleop_twist.h" include (:system-flag t) nil [1638 1680])
+            ("ardrone_autonomy/LedAnim.h" include nil nil [1681 1718])
+            ("utils/ardrone_date.h" include nil nil [1719 1750])
+            ("algorithm" include (:system-flag t) nil [1752 1772])
+            ("needs_takeoff" variable (:type "bool") nil [1774 1801])
+            ("needs_land" variable (:type "bool") nil [1802 1826])
+            ("needs_reset" variable (:type "bool") nil [1827 1852])
+            ("cmd_vel" variable (:type ("geometry_msgs::Twist" type (:type "class") nil nil)) nil [1853 1882])
+            ("old_left_right" variable (:type "float") nil [1883 1912])
+            ("old_front_back" variable (:type "float") nil [1913 1942])
+            ("old_up_down" variable (:type "float") nil [1943 1969])
+            ("old_turn" variable (:type "float") nil [1970 1993])
+            ("cam_state" variable (:type "int") nil [1995 2029])
+            ("set_navdata_demo_value" variable (:type "int") nil [2089 2139])
+            ("detect_enemy_color" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2140 2207])
+            ("detect_dtype" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2208 2264])
+            ("detect_hori_type" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2265 2329])
+            ("detect_vert_type" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2330 2395])
+            ("detect_indoor_hull" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2396 2427])
+            ("detect_disable_placeholder" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2428 2467])
+            ("detect_enable_placeholder" variable (:type ("int32_t" type (:type "class") nil nil)) nil [2468 2506])
+            ("ledAnimMap" variable
+               (:dereference 1
+                :constant-flag t
+                :type ("LED_ANIMATION_IDS" type (:type "class") nil nil))
+                nil [2508 2736])
+            ("SetCamChannelCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::CamSelect::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2815 2861])
+                    ("response" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::CamSelect::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2889 2937]))                  
+                :type "bool")
+                nil [2788 3207])
+            ("ToggleCamCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("std_srvs::Empty::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3281 3315])
+                    ("response" variable
+                       (:reference 1
+                        :type ("std_srvs::Empty::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3339 3375]))                  
+                :type "bool")
+                nil [3258 3619])
+            ("SetRecordCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::RecordEnable::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3704 3753])
+                    ("response" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::RecordEnable::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3777 3828]))                  
+                :type "bool")
+                nil [3681 4765])
+            ("SetLedAnimationCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::LedAnim::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4796 4840])
+                    ("response" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::LedAnim::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4870 4916]))                  
+                :type "bool")
+                nil [4767 5298])
+            ("SetFlightAnimationCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::FlightAnim::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5332 5379])
+                    ("response" variable
+                       (:reference 1
+                        :type ("ardrone_autonomy::FlightAnim::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5412 5461]))                  
+                :type "bool")
+                nil [5300 5888])
+            ("FlatTrimCallback" function
+               (:arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("std_srvs::Empty::Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5912 5946])
+                    ("response" variable
+                       (:reference 1
+                        :type ("std_srvs::Empty::Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5969 6005]))                  
+                :type "bool")
+                nil [5890 6148])
+            ("CmdVelCallback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::TwistConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6170 6210]))                  
+                :type "void")
+                nil [6150 6727])
+            ("LandCallback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std_msgs::Empty" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6747 6774]))                  
+                :type "void")
+                nil [6729 6867])
+            ("ResetCallback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std_msgs::Empty" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6888 6915]))                  
+                :type "void")
+                nil [6869 7009])
+            ("TakeoffCallback" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std_msgs::Empty" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7032 7059]))                  
+                :type "void")
+                nil [7011 7155])
+            ("open_teleop" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7178 7183]))                  
+                :type ("C_RESULT" type (:type "class") nil nil))
+                nil [7157 7202])
+            ("update_teleop" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7227 7232]))                  
+                :type ("C_RESULT" type (:type "class") nil nil))
+                nil [7204 9589])
+            ("close_teleop" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9613 9618]))                  
+                :type ("C_RESULT" type (:type "class") nil nil))
+                nil [9591 9637])
+            ("teleop" variable (:type ("input_device_t" type (:type "class") nil nil)) nil [9639 9726]))          
+    :file "teleop_twist.cpp"
+    :pointmax 9727
+    :fsize 9726
+    :lastmodtime '(22040 46114 721430 965000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!catkin_ws!src!ardrone_autonomy!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

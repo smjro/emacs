@@ -1,0 +1,646 @@
+;; Object matlab/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "matlab/"
+  :tables (list 
+   (semanticdb-table "aginvpendC.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("rhfuncu.c" include nil nil [1 21])
+            ("DIMX" variable (:constant-flag t) nil [168 172])
+            ("DIMX" variable (:constant-flag t) nil [168 172])
+            ("DIMUC" variable (:constant-flag t) nil [185 190])
+            ("DIMP" variable (:constant-flag t) nil [202 206])
+            ("tsim0" variable (:type "double") nil [264 281])
+            ("tsim" variable (:type "double") nil [282 299])
+            ("tf" variable (:type "double") nil [300 316])
+            ("ht" variable (:type "double") nil [317 335])
+            ("alpha" variable (:type "double") nil [336 355])
+            ("zeta" variable (:type "double") nil [356 375])
+            ("x0" variable
+               (:dereference 1
+                :type "double")
+                nil [377 440])
+            ("u0" variable
+               (:dereference 1
+                :type "double")
+                nil [442 476])
+            ("hdir" variable (:type "double") nil [477 497])
+            ("rtol" variable (:type "double") nil [498 518])
+            ("kmax" variable (:type "int") nil [519 532])
+            ("dv" variable (:type "int") nil [533 545])
+            ("dstep" variable (:type "int") nil [546 562])
+            ("FNMHD" variable (:constant-flag t) nil [571 576])
+            ("As" variable (:type "double") nil [662 680])
+            ("Bs" variable (:type "double") nil [681 699])
+            ("A52" variable (:type "double") nil [700 722])
+            ("C22" variable (:type "double") nil [723 747])
+            ("A32a" variable (:type "double") nil [748 771])
+            ("A32" variable (:type "double") nil [772 795])
+            ("A32b" variable (:type "double") nil [796 819])
+            ("u1max" variable (:type "double") nil [820 840])
+            ("q" variable
+               (:dereference 1
+                :type "double")
+                nil [842 870])
+            ("r" variable
+               (:dereference 1
+                :type "double")
+                nil [871 895])
+            ("sf" variable
+               (:dereference 1
+                :type "double")
+                nil [896 925])
+            ("phix" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [1049 1058])
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1059 1070])
+                    ("phx1" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1071 1085]))                  
+                :type "void")
+                nil [1039 1195])
+            ("xpfunc" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [1259 1268])
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1269 1280])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1281 1292])
+                    ("xprime" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1293 1309]))                  
+                :type "void")
+                nil [1247 1607])
+            ("lpfunc" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [1673 1682])
+                    ("lmd" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1683 1696])
+                    ("linp" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1697 1711])
+                    ("lprime" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1712 1728]))                  
+                :type "void")
+                nil [1661 2373])
+            ("hufunc" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [2456 2465])
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2466 2477])
+                    ("lmd" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2478 2491])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2492 2503])
+                    ("hui" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2504 2517]))                  
+                :type "void")
+                nil [2444 3364])
+            ("final" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3439 3448])
+                    ("t_cpu" variable (:type "float") (reparse-symbol arg-sub-list) [3449 3461])
+                    ("t_s2e" variable (:type "float") (reparse-symbol arg-sub-list) [3462 3474]))                  
+                :type "void")
+                nil [3428 4850])
+            ("rhmainu.c" include nil nil [4852 4872]))          
+    :file "aginvpendC.c"
+    :pointmax 4873
+    :fsize 4872
+    :lastmodtime '(21913 7060 92636 727000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DIMX" . ((number "4" 175 . 176)))
+          ("FNMHD" . ((string "\"aginvpendC04\"" 578 . 592)))
+          ("DIMUC" . ((number "3" 192 . 193)))
+          ("DIMP" . ((number "0" 209 . 210)))
+          )
+
+    )
+   (semanticdb-table "rhfuncu.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("math.h" include (:system-flag t) nil [60 77])
+            ("time.h" include (:system-flag t) nil [78 95])
+            ("TDIV" variable (:constant-flag t) nil [104 108])
+            ("mmov" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [499 505])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [506 512])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [513 523])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [524 535]))                  
+                :type "void")
+                nil [488 698])
+            ("madd" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [754 760])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [761 767])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [768 778])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [779 789])
+                    ("c" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [790 801]))                  
+                :type "void")
+                nil [743 974])
+            ("msub" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1030 1036])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1037 1043])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1044 1054])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1055 1065])
+                    ("c" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1066 1077]))                  
+                :type "void")
+                nil [1019 1250])
+            ("mmulsc" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1302 1308])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1309 1315])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1316 1326])
+                    ("k" variable (:type "double") (reparse-symbol arg-sub-list) [1327 1336])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1337 1348]))                  
+                :type "void")
+                nil [1289 1513])
+            ("mdivsc" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1565 1571])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1572 1578])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1579 1589])
+                    ("k" variable (:type "double") (reparse-symbol arg-sub-list) [1590 1599])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1600 1611]))                  
+                :type "void")
+                nil [1552 1776])
+            ("mvinner" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1839 1845])
+                    ("a" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1846 1856])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1857 1868]))                  
+                :type "double")
+                nil [1823 1958])
+            ("defvector" function
+               (:pointer 1
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2023 2029]))                  
+                :type "double")
+                nil [2005 2221])
+            ("freevector" function
+               (:arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2239 2249]))                  
+                :type "void")
+                nil [2223 2263])
+            ("defmatrix" function
+               (:pointer 2
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2322 2328])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [2329 2335]))                  
+                :type "double")
+                nil [2303 2759])
+            ("freematrix" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2777 2788]))                  
+                :type "void")
+                nil [2761 2815])
+            ("EPSLOCATE" variable (:constant-flag t) nil [2926 2935])
+            ("locate" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2953 2959])
+                    ("xx" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2960 2972])
+                    ("x" variable (:type "double") (reparse-symbol arg-sub-list) [2973 2982]))                  
+                :type "int")
+                nil [2942 3986])
+            ("EPSTABLE1" variable (:constant-flag t) nil [4107 4116])
+            ("table1" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [4135 4141])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [4142 4148])
+                    ("t" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4149 4160])
+                    ("x" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4161 4172])
+                    ("t1" variable (:type "double") (reparse-symbol arg-sub-list) [4173 4183])
+                    ("x1" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4184 4196]))                  
+                :type "void")
+                nil [4123 4780])
+            ("givrot" function
+               (:arguments 
+                  ( ("k" variable (:type "int") (reparse-symbol arg-sub-list) [4842 4848])
+                    ("c" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4849 4859])
+                    ("s" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4860 4870])
+                    ("v" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4871 4881]))                  
+                :type "void")
+                nil [4830 5033])
+            ("nfgmres" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5583 5597])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5601 5607])
+                    ("b" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5608 5618])
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5619 5629])
+                    ("kmax" variable (:type "int") (reparse-symbol arg-sub-list) [5630 5639])
+                    ("err" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5640 5652]))                  
+                :type "void")
+                nil [5570 7564])
+            ("DIMRK" variable (:constant-flag t) nil [7949 7954])
+            ("DIMAD" variable (:constant-flag t) nil [8044 8049])
+            ("DIMEU" variable (:constant-flag t) nil [8128 8133])
+            ("func" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [8572 8587])
+            ("fxy" variable
+               (:dereference 1
+                :type "double")
+                nil [8588 8619])
+            ("ans" variable
+               (:dereference 1
+                :type "double")
+                nil [8588 8619])
+            ("h" variable (:type "double") nil [8588 8619])
+            ("u" variable
+               (:dereference 1
+                :type "double")
+                nil [8588 8619])
+            ("y" variable
+               (:dereference 1
+                :type "double")
+                nil [8588 8619])
+            ("x" variable (:type "double") nil [8588 8619])
+            ("dim" variable (:type "int") nil [8621 8629])
+            ("func" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [10185 10200])
+            ("ans" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("h" variable (:type "double") nil [10201 10241])
+            ("f3" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("f2" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("f1" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("u" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("y" variable
+               (:dereference 1
+                :type "double")
+                nil [10201 10241])
+            ("x" variable (:type "double") nil [10201 10241])
+            ("dim" variable (:type "int") nil [10279 10287])
+            ("nfeulerinp" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11250 11262])
+                    ("x" variable (:type "double") (reparse-symbol arg-sub-list) [11266 11275])
+                    ("y" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11276 11287])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11288 11299])
+                    ("h" variable (:type "double") (reparse-symbol arg-sub-list) [11300 11309])
+                    ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [11310 11318])
+                    ("ans" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11319 11332]))                  
+                :type "void")
+                nil [11234 11438])
+            ("isim" variable (:type "int") nil [11513 11525])
+            ("dimeq" variable (:type "int") nil [11526 11537])
+            ("onemzetahdir" variable (:type "double") nil [11538 11577])
+            ("hdirbht" variable (:type "double") nil [11538 11577])
+            ("onemhdir" variable (:type "double") nil [11538 11577])
+            ("htau" variable (:type "double") nil [11578 11590])
+            ("ts" variable (:type "double") nil [11591 11601])
+            ("tauf" variable (:type "double") nil [11602 11614])
+            ("tau" variable
+               (:pointer 1
+                :type "double")
+                nil [11615 11627])
+            ("ltau" variable
+               (:pointer 2
+                :type "double")
+                nil [11628 11659])
+            ("xtau1" variable
+               (:pointer 2
+                :type "double")
+                nil [11628 11659])
+            ("xtau" variable
+               (:pointer 2
+                :type "double")
+                nil [11628 11659])
+            ("hutau2" variable
+               (:pointer 2
+                :type "double")
+                nil [11660 11712])
+            ("hutau1" variable
+               (:pointer 2
+                :type "double")
+                nil [11660 11712])
+            ("hutau" variable
+               (:pointer 2
+                :type "double")
+                nil [11660 11712])
+            ("utau1" variable
+               (:pointer 2
+                :type "double")
+                nil [11660 11712])
+            ("utau" variable
+               (:pointer 2
+                :type "double")
+                nil [11660 11712])
+            ("errvec" variable
+               (:pointer 1
+                :type "double")
+                nil [11713 11757])
+            ("dutmp" variable
+               (:pointer 1
+                :type "double")
+                nil [11713 11757])
+            ("duvec" variable
+               (:pointer 1
+                :type "double")
+                nil [11713 11757])
+            ("bvec" variable
+               (:pointer 1
+                :type "double")
+                nil [11713 11757])
+            ("x1s" variable
+               (:pointer 1
+                :type "double")
+                nil [11713 11757])
+            ("hu0" variable
+               (:pointer 1
+                :type "double")
+                nil [11758 11777])
+            ("lmd0" variable
+               (:pointer 1
+                :type "double")
+                nil [11758 11777]))          
+    :file "rhfuncu.c"
+    :pointmax 11778
+    :fsize 11777
+    :lastmodtime '(21913 4591 404603 948000)
+    :unmatched-syntax '((semantic-list 11262 . 11264) (semantic-list 11255 . 11262) (semantic-list 10327 . 10996) (semantic-list 10153 . 10184) (symbol 10143 . 10153) (VOID 10138 . 10142) (semantic-list 8630 . 9837) (semantic-list 8545 . 8571) (symbol 8535 . 8545) (VOID 8530 . 8534) (semantic-list 5597 . 5599) (semantic-list 5588 . 5597))
+    :lexical-table 
+        '(("TDIV" . ((number "100" 109 . 112)))
+          ("DIMEU" . ((number "50" 8134 . 8136)))
+          ("EPSTABLE1" . ((number "1e-6" 4117 . 4121)))
+          ("EPSLOCATE" . ((number "1e-6" 2936 . 2940)))
+          ("DIMRK" . ((number "50" 7955 . 7957)))
+          ("DIMAD" . ((number "50" 8050 . 8052)))
+          )
+
+    )
+   (semanticdb-table "rhmainu.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("dhu0func" function
+               (:arguments 
+                  ( ("dimu" variable (:type "int") (reparse-symbol arg-sub-list) [556 565])
+                    ("du0" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [566 578])
+                    ("dhu" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [579 591]))                  
+                :type "void")
+                nil [542 792])
+            ("init" function
+               (:arguments 
+                  ( ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [804 815])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [816 827]))                  
+                :type "void")
+                nil [794 2015])
+            ("errfunc" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [2081 2090])
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2091 2101])
+                    ("u" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2102 2113])
+                    ("hu" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2114 2126]))                  
+                :type "void")
+                nil [2068 3564])
+            ("adufunc" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3579 3585])
+                    ("du" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3586 3597])
+                    ("adu" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3598 3610]))                  
+                :type "void")
+                nil [3566 3786])
+            ("unew" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [3798 3807])
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3808 3819])
+                    ("x1" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3820 3832])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3833 3844]))                  
+                :type "void")
+                nil [3788 4901])
+            ("savedata" function
+               (:arguments 
+                  ( ("fpx" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4963 4973])
+                    ("fpu" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4974 4984])
+                    ("fpe" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4985 4995])
+                    ("fpp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4996 5006])
+                    ("t" variable (:type "double") (reparse-symbol arg-sub-list) [5007 5016])
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5017 5028])
+                    ("u" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5029 5040]))                  
+                :type "void")
+                nil [4949 5637])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5689 5694]))                  
+                :type "int")
+                nil [5680 9080]))          
+    :file "rhmainu.c"
+    :pointmax 9081
+    :fsize 9080
+    :lastmodtime '(21913 37774 137318 217000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CXX" variable (:default-value ("g++")) nil [12 20])
+            ("CXXFLAGS" variable (:default-value ("`pkg-config --cflags opencv`")) nil [71 110])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs opencv`")) nil [110 146])
+            ("LDLIBS" variable (:default-value ("$(IPL_LIB)" "$(GPG_LIB)" "-lm" "-lgsl" "-lgslcblas")) nil [146 198])
+            ("PROG" variable (:default-value ("aginvpendC")) nil [199 215])
+            ("OBJS" variable (:default-value ("$(PROG).o")) nil [215 230])
+            (".PHONY" function (:arguments ("all" "clean")) nil [231 249])
+            ("$(PROG)" function (:arguments ("$(OBJS)")) nil [249 314])
+            ("%.o" function (:arguments ("%.cpp")) nil [315 352])
+            ("all" function (:arguments ("$(PROG)")) nil [353 366])
+            ("clean" function nil nil [367 397]))          
+    :file "Makefile"
+    :pointmax 392
+    :fsize 406
+    :lastmodtime '(21913 4710 12605 523000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!program!matlab!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

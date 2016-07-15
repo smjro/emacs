@@ -1,0 +1,103 @@
+;; Object br3ttb-Arduino-PID-Library-fb095d8/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "br3ttb-Arduino-PID-Library-fb095d8/"
+  :tables (list 
+   (semanticdb-table "PID_v1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("WProgram.h" include nil nil [397 420])
+            ("PID_v1.h" include (:system-flag t) nil [429 448])
+            ("PID" function
+               (:constructor-flag t
+                :parent "PID"
+                :arguments 
+                  ( ("Input" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [754 768])
+                    ("Output" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [769 784])
+                    ("Setpoint" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [785 802])
+                    ("Kp" variable (:type "double") (reparse-symbol arg-sub-list) [811 821])
+                    ("Ki" variable (:type "double") (reparse-symbol arg-sub-list) [822 832])
+                    ("Kd" variable (:type "double") (reparse-symbol arg-sub-list) [833 843])
+                    ("ControllerDirection" variable (:type "int") (reparse-symbol arg-sub-list) [844 868]))                  
+                :type ("PID" type (:type "class") nil nil))
+                nil [745 1280])
+            ("Compute" function
+               (:parent "PID"
+                :type "bool")
+                nil [1752 2542])
+            ("SetTunings" function
+               (:parent "PID"
+                :arguments 
+                  ( ("Kp" variable (:type "double") (reparse-symbol arg-sub-list) [2928 2938])
+                    ("Ki" variable (:type "double") (reparse-symbol arg-sub-list) [2939 2949])
+                    ("Kd" variable (:type "double") (reparse-symbol arg-sub-list) [2950 2960]))                  
+                :type "void")
+                nil [2907 3289])
+            ("SetSampleTime" function
+               (:parent "PID"
+                :arguments 
+                  ( ("NewSampleTime" variable (:type "int") (reparse-symbol arg-sub-list) [3554 3572]))                  
+                :type "void")
+                nil [3530 3787])
+            ("SetOutputLimits" function
+               (:parent "PID"
+                :arguments 
+                  ( ("Min" variable (:type "double") (reparse-symbol arg-sub-list) [4377 4388])
+                    ("Max" variable (:type "double") (reparse-symbol arg-sub-list) [4389 4400]))                  
+                :type "void")
+                nil [4351 4673])
+            ("SetMode" function
+               (:parent "PID"
+                :arguments 
+                  ( ("Mode" variable (:type "int") (reparse-symbol arg-sub-list) [5031 5040]))                  
+                :type "void")
+                nil [5013 5210])
+            ("Initialize" function
+               (:parent "PID"
+                :type "void")
+                nil [5483 5637])
+            ("SetControllerDirection" function
+               (:parent "PID"
+                :arguments 
+                  ( ("Direction" variable (:type "int") (reparse-symbol arg-sub-list) [6127 6141]))                  
+                :type "void")
+                nil [6094 6303])
+            ("GetKp" function
+               (:parent "PID"
+                :type "double")
+                nil [6691 6729])
+            ("GetKi" function
+               (:parent "PID"
+                :type "double")
+                nil [6730 6767])
+            ("GetKd" function
+               (:parent "PID"
+                :type "double")
+                nil [6768 6805])
+            ("GetMode" function
+               (:parent "PID"
+                :type "int")
+                nil [6806 6863])
+            ("GetDirection" function
+               (:parent "PID"
+                :type "int")
+                nil [6864 6917]))          
+    :file "PID_v1.cpp"
+    :pointmax 6919
+    :fsize 6918
+    :lastmodtime '(21839 42392 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!.cache!.fr-CEQUFt!br3ttb-Arduino-PID-Library-fb095d8!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

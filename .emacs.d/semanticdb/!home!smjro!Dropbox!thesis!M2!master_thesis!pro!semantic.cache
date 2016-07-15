@@ -1,0 +1,41 @@
+;; Object pro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pro/"
+  :tables (list 
+   (semanticdb-table "pro.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpc.h" include nil nil [87 103])
+            ("main" function (:type "int") nil [113 1431]))          
+    :file "pro.c"
+    :pointmax 1432
+    :fsize 1431
+    :lastmodtime '(21796 60750 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mpc.h"
+    :file "mpc.h"
+    :fsize 2661
+    :lastmodtime '(21796 60485 0 0)
+    )
+   (semanticdb-table "model.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("model.h" include nil nil [1 19])
+            ("main" function (:type "int") nil [21 2588]))          
+    :file "model.cpp"
+    :pointmax 2589
+    :fsize 2588
+    :lastmodtime '(21905 6983 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "model.h"
+    :file "model.h"
+    :fsize 10248
+    :lastmodtime '(21905 6945 0 0)
+    )
+   )
+  :file "!home!smjro!Dropbox!thesis!M2!master_thesis!pro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

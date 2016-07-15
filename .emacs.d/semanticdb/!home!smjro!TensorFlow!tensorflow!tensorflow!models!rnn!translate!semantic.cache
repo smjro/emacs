@@ -1,0 +1,446 @@
+;; Object translate/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "translate/"
+  :tables (list 
+   (semanticdb-table "data_utils.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Utilities for downloading data from WMT, tokenizing, vocabularies.\"\"\"" code nil nil [679 751])
+            ("__future__" include nil nil [752 790])
+            ("__future__" include nil nil [791 822])
+            ("__future__" include nil nil [823 860])
+            ("gzip" include nil nil [862 873])
+            ("os" include nil nil [874 883])
+            ("re" include nil nil [884 893])
+            ("tarfile" include nil nil [894 908])
+            ("six.moves" include nil nil [910 938])
+            ("tensorflow.python.platform" include nil nil [940 984])
+            ("_PAD" variable nil nil [1050 1063])
+            ("_GO" variable nil nil [1064 1075])
+            ("_EOS" variable nil nil [1076 1089])
+            ("_UNK" variable nil nil [1090 1103])
+            ("_START_VOCAB" variable nil nil [1104 1142])
+            ("PAD_ID" variable nil nil [1144 1154])
+            ("GO_ID" variable nil nil [1155 1164])
+            ("EOS_ID" variable nil nil [1165 1175])
+            ("UNK_ID" variable nil nil [1176 1186])
+            ("_WORD_SPLIT" variable nil nil [1228 1271])
+            ("_DIGIT_RE" variable nil nil [1272 1301])
+            ("_WMT_ENFR_TRAIN_URL" variable nil nil [1324 1398])
+            ("_WMT_ENFR_DEV_URL" variable nil nil [1399 1459])
+            ("maybe_download" function
+               (:documentation "Download filename from url unless it's already in directory."
+                :arguments 
+                  ( ("directory" variable nil (reparse-symbol function_parameters) [1481 1490])
+                    ("filename" variable nil (reparse-symbol function_parameters) [1492 1500])
+                    ("url" variable nil (reparse-symbol function_parameters) [1502 1505]))                  )
+                nil [1462 2002])
+            ("gunzip_file" function
+               (:documentation "Unzips from gz_path into new_path."
+                :arguments 
+                  ( ("gz_path" variable nil (reparse-symbol function_parameters) [2020 2027])
+                    ("new_path" variable nil (reparse-symbol function_parameters) [2029 2037]))                  )
+                nil [2004 2278])
+            ("get_wmt_enfr_train_set" function
+               (:documentation "Download the WMT en-fr training corpus to directory unless it's there."
+                :arguments 
+                  ( ("directory" variable nil (reparse-symbol function_parameters) [2307 2316]))                  )
+                nil [2280 2945])
+            ("get_wmt_enfr_dev_set" function
+               (:documentation "Download the WMT en-fr training corpus to directory unless it's there."
+                :arguments 
+                  ( ("directory" variable nil (reparse-symbol function_parameters) [2972 2981]))                  )
+                nil [2947 3747])
+            ("basic_tokenizer" function
+               (:documentation "Very basic tokenizer: split the sentence into a list of tokens."
+                :arguments 
+                  ( ("sentence" variable nil (reparse-symbol function_parameters) [3769 3777]))                  )
+                nil [3749 4024])
+            ("create_vocabulary" function
+               (:documentation "Create vocabulary file (if it does not exist yet) from data file.
+
+  Data file is assumed to contain one sentence per line. Each sentence is
+  tokenized and digits are normalized (if normalize_digits is set).
+  Vocabulary contains the most-frequent tokens up to max_vocabulary_size.
+  We write it to vocabulary_path in a one-token-per-line format, so that later
+  token in the first line gets id=0, second line gets id=1, and so on.
+
+  Args:
+    vocabulary_path: path where the vocabulary will be created.
+    data_path: data file that will be used to create vocabulary.
+    max_vocabulary_size: limit on the size of the created vocabulary.
+    tokenizer: a function to use to tokenize each data sentence;
+      if None, basic_tokenizer will be used.
+    normalize_digits: Boolean; if true, all digits are replaced by 0s.
+  "
+                :arguments 
+                  ( ("vocabulary_path" variable nil (reparse-symbol function_parameters) [4048 4063])
+                    ("data_path" variable nil (reparse-symbol function_parameters) [4065 4074])
+                    ("max_vocabulary_size" variable nil (reparse-symbol function_parameters) [4076 4095])
+                    ("tokenizer" variable nil (reparse-symbol function_parameters) [4119 4128])
+                    ("normalize_digits" variable nil (reparse-symbol function_parameters) [4135 4151]))                  )
+                nil [4026 5898])
+            ("initialize_vocabulary" function
+               (:documentation "Initialize vocabulary from file.
+
+  We assume the vocabulary is stored one-item-per-line, so a file:
+    dog
+    cat
+  will result in a vocabulary {\"dog\": 0, \"cat\": 1}, and this function will
+  also return the reversed-vocabulary [\"dog\", \"cat\"].
+
+  Args:
+    vocabulary_path: path to the file containing the vocabulary.
+
+  Returns:
+    a pair: the vocabulary (a dictionary mapping string to integers), and
+    the reversed vocabulary (a list, which reverses the vocabulary mapping).
+
+  Raises:
+    ValueError: if the provided vocabulary_path does not exist.
+  "
+                :arguments 
+                  ( ("vocabulary_path" variable nil (reparse-symbol function_parameters) [5926 5941]))                  )
+                nil [5900 6882])
+            ("sentence_to_token_ids" function
+               (:documentation "Convert a string to list of integers representing token-ids.
+
+  For example, a sentence \"I have a dog\" may become tokenized into
+  [\"I\", \"have\", \"a\", \"dog\"] and with vocabulary {\"I\": 1, \"have\": 2,
+  \"a\": 4, \"dog\": 7\"} this function will return [1, 2, 4, 7].
+
+  Args:
+    sentence: a string, the sentence to convert to token-ids.
+    vocabulary: a dictionary mapping tokens to integers.
+    tokenizer: a function to use to tokenize each sentence;
+      if None, basic_tokenizer will be used.
+    normalize_digits: Boolean; if true, all digits are replaced by 0s.
+
+  Returns:
+    a list of integers, the token-ids for the sentence.
+  "
+                :arguments 
+                  ( ("sentence" variable nil (reparse-symbol function_parameters) [6910 6918])
+                    ("vocabulary" variable nil (reparse-symbol function_parameters) [6920 6930])
+                    ("tokenizer" variable nil (reparse-symbol function_parameters) [6958 6967])
+                    ("normalize_digits" variable nil (reparse-symbol function_parameters) [6974 6990]))                  )
+                nil [6884 7959])
+            ("data_to_token_ids" function
+               (:documentation "Tokenize data file and turn into token-ids using given vocabulary file.
+
+  This function loads data line-by-line from data_path, calls the above
+  sentence_to_token_ids, and saves the result to target_path. See comment
+  for sentence_to_token_ids on the details of token-ids format.
+
+  Args:
+    data_path: path to the data file in one-sentence-per-line format.
+    target_path: path where the file with token-ids will be created.
+    vocabulary_path: path to the vocabulary file.
+    tokenizer: a function to use to tokenize each sentence;
+      if None, basic_tokenizer will be used.
+    normalize_digits: Boolean; if true, all digits are replaced by 0s.
+  "
+                :arguments 
+                  ( ("data_path" variable nil (reparse-symbol function_parameters) [7983 7992])
+                    ("target_path" variable nil (reparse-symbol function_parameters) [7994 8005])
+                    ("vocabulary_path" variable nil (reparse-symbol function_parameters) [8007 8022])
+                    ("tokenizer" variable nil (reparse-symbol function_parameters) [8046 8055])
+                    ("normalize_digits" variable nil (reparse-symbol function_parameters) [8062 8078]))                  )
+                nil [7961 9379])
+            ("prepare_wmt_data" function
+               (:documentation "Get WMT data into data_dir, create vocabularies and tokenize data.
+
+  Args:
+    data_dir: directory in which the data sets will be stored.
+    en_vocabulary_size: size of the English vocabulary to create and use.
+    fr_vocabulary_size: size of the French vocabulary to create and use.
+
+  Returns:
+    A tuple of 6 elements:
+      (1) path to the token-ids for English training data-set,
+      (2) path to the token-ids for French training data-set,
+      (3) path to the token-ids for English development data-set,
+      (4) path to the token-ids for French development data-set,
+      (5) path to the English vocabulary file,
+      (6) path to the French vocabulary file.
+  "
+                :arguments 
+                  ( ("data_dir" variable nil (reparse-symbol function_parameters) [9402 9410])
+                    ("en_vocabulary_size" variable nil (reparse-symbol function_parameters) [9412 9430])
+                    ("fr_vocabulary_size" variable nil (reparse-symbol function_parameters) [9432 9450]))                  )
+                nil [9381 11414]))          
+    :file "data_utils.py"
+    :pointmax 11414
+    :fsize 11413
+    :lastmodtime '(22251 20909 345689 561000)
+    :unmatched-syntax '((NAME 5427 . 5431) (IF 5460 . 5462) (ELSE 5480 . 5484) (NAME 5327 . 5333) (IF 5352 . 5354) (ELSE 5365 . 5369))
+    )
+   (semanticdb-table "translate.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Binary for training translation models and decoding from them.
+
+Running this program without --decode will download the WMT corpus into
+the directory specified as --data_dir and tokenize it in a very basic way,
+and then start training a model saving checkpoints to --train_dir.
+
+Running with --decode starts an interactive loop so you can see how
+the current checkpoint translates English sentences into French.
+
+See the following papers for more information on neural translation models.
+ * http://arxiv.org/abs/1409.3215
+ * http://arxiv.org/abs/1409.0473
+ * http://arxiv.org/abs/1412.2007
+\"\"\"" code nil nil [679 1276])
+            ("__future__" include nil nil [1277 1315])
+            ("__future__" include nil nil [1316 1347])
+            ("__future__" include nil nil [1348 1385])
+            ("math" include nil nil [1387 1398])
+            ("os" include nil nil [1399 1408])
+            ("random" include nil nil [1409 1422])
+            ("sys" include nil nil [1423 1433])
+            ("time" include nil nil [1434 1445])
+            ("numpy" include nil nil [1447 1465])
+            ("six.moves" include nil nil [1466 1494])
+            ("tensorflow" include nil nil [1532 1555])
+            ("data_utils" include nil nil [1557 1574])
+            ("seq2seq_model" include nil nil [1575 1595])
+            ("tf" code nil nil [1598 1663])
+            ("tf" code nil nil [1664 1789])
+            ("tf" code nil nil [1790 1899])
+            ("tf" code nil nil [1900 2011])
+            ("tf" code nil nil [2012 2082])
+            ("tf" code nil nil [2083 2161])
+            ("tf" code nil nil [2162 2241])
+            ("tf" code nil nil [2242 2320])
+            ("tf" code nil nil [2321 2385])
+            ("tf" code nil nil [2386 2456])
+            ("tf" code nil nil [2457 2591])
+            ("tf" code nil nil [2592 2725])
+            ("tf" code nil nil [2726 2839])
+            ("tf" code nil nil [2840 2958])
+            ("FLAGS" variable nil nil [2960 2986])
+            ("_buckets" variable nil nil [3123 3173])
+            ("read_data" function
+               (:documentation "Read data from source and target files and put into buckets.
+
+  Args:
+    source_path: path to the files with token-ids for the source language.
+    target_path: path to the file with token-ids for the target language;
+      it must be aligned with the source file: n-th line contains the desired
+      output for n-th line from the source_path.
+    max_size: maximum number of lines to read, all other will be ignored;
+      if 0 or None, data files will be read completely (no limit).
+
+  Returns:
+    data_set: a list of length len(_buckets); data_set[n] contains a list of
+      (source, target) pairs read from the provided data files that fit
+      into the n-th bucket, i.e., such that len(source) < _buckets[n][0] and
+      len(target) < _buckets[n][1]; source and target are lists of token-ids.
+  "
+                :arguments 
+                  ( ("source_path" variable nil (reparse-symbol function_parameters) [3190 3201])
+                    ("target_path" variable nil (reparse-symbol function_parameters) [3203 3214])
+                    ("max_size" variable nil (reparse-symbol function_parameters) [3216 3224]))                  )
+                nil [3176 4980])
+            ("create_model" function
+               (:documentation "Create translation model and initialize or load parameters in session."
+                :arguments 
+                  ( ("session" variable nil (reparse-symbol function_parameters) [4999 5006])
+                    ("forward_only" variable nil (reparse-symbol function_parameters) [5008 5020]))                  )
+                nil [4982 5742])
+            ("train" function (:documentation "Train a en->fr translation model using WMT data.") nil [5744 9390])
+            ("decode" function nil nil [9392 11310])
+            ("self_test" function (:documentation "Test the translation model.") nil [11312 12222])
+            ("main" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [12233 12234]))              ) nil [12224 12329])
+            ("if" code nil nil [12330 12372]))          
+    :file "translate.py"
+    :pointmax 12372
+    :fsize 12371
+    :lastmodtime '(22251 21721 793700 349000)
+    :unmatched-syntax '((NAME 9218 . 9226) (IF 9249 . 9251) (ELSE 9268 . 9272) (NAME 8090 . 8100) (IF 8118 . 8120) (ELSE 8132 . 8136))
+    )
+   (semanticdb-table "seq2seq_model.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"Sequence-to-sequence model with an attention mechanism.\"\"\"" code nil nil [679 740])
+            ("__future__" include nil nil [742 780])
+            ("__future__" include nil nil [781 812])
+            ("__future__" include nil nil [813 850])
+            ("random" include nil nil [852 865])
+            ("numpy" include nil nil [867 885])
+            ("six.moves" include nil nil [886 914])
+            ("tensorflow" include nil nil [952 975])
+            ("data_utils" include nil nil [977 994])
+            ("Seq2SeqModel" type
+               (:documentation "Sequence-to-sequence model with attention and for multiple buckets.
+
+  This class implements a multi-layer recurrent neural network as encoder,
+  and an attention-based decoder. This is the same as the model described in
+  this paper: http://arxiv.org/abs/1412.7449 - please look there for details,
+  or into the seq2seq library for complete model implementation.
+  This class also allows to use GRU cells in addition to LSTM cells, and
+  sampled softmax to handle large output vocabulary size. A single-layer
+  version of this model, but with bi-directional encoder, was presented in
+    http://arxiv.org/abs/1409.0473
+  and sampled softmax is described in Section 3 of the following paper.
+    http://arxiv.org/abs/1412.2007
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Create the model.
+
+    Args:
+      source_vocab_size: size of the source vocabulary.
+      target_vocab_size: size of the target vocabulary.
+      buckets: a list of pairs (I, O), where I specifies maximum input length
+        that will be processed in that bucket, and O specifies maximum output
+        length. Training instances that have inputs longer than I or outputs
+        longer than O will be pushed to the next bucket and padded accordingly.
+        We assume that the list is sorted, e.g., [(2, 4), (8, 16)].
+      size: number of units in each layer of the model.
+      num_layers: number of layers in the model.
+      max_gradient_norm: gradients will be clipped to maximally this norm.
+      batch_size: the size of the batches used during training;
+        the model construction is independent of batch_size, so it can be
+        changed after initialization if this is convenient, e.g., for decoding.
+      learning_rate: learning rate to start with.
+      learning_rate_decay_factor: decay learning rate by this much when needed.
+      use_lstm: if true, we use LSTM cells instead of GRU cells.
+      num_samples: number of samples for sampled softmax.
+      forward_only: if set, we do not construct the backward pass in the model.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [2027 3290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3295 3337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3342 3384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3389 3411])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3416 3444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3449 3520])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3525 3638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3643 3693])
+                            ("output_projection" variable nil (reparse-symbol indented_block_body) [3762 3786])
+                            ("softmax_loss_function" variable nil (reparse-symbol indented_block_body) [3791 3819])
+                            ("if" code nil (reparse-symbol indented_block_body) [3903 4507])
+                            ("single_cell" variable nil (reparse-symbol indented_block_body) [4568 4610])
+                            ("if" code nil (reparse-symbol indented_block_body) [4615 4683])
+                            ("cell" variable nil (reparse-symbol indented_block_body) [4687 4705])
+                            ("if" code nil (reparse-symbol indented_block_body) [4710 4798])
+                            ("seq2seq_f" function (:arguments 
+                              ( ("encoder_inputs" variable nil (reparse-symbol function_parameters) [4891 4905])
+                                ("decoder_inputs" variable nil (reparse-symbol function_parameters) [4907 4921])
+                                ("do_decode" variable nil (reparse-symbol function_parameters) [4923 4932]))                              ) (reparse-symbol indented_block_body) [4877 5159])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5188 5212])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5217 5241])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5246 5270])
+                            ("for" code nil (reparse-symbol indented_block_body) [5275 5493])
+                            ("for" code nil (reparse-symbol indented_block_body) [5497 5835])
+                            ("targets" variable nil (reparse-symbol indented_block_body) [5893 5992])
+                            ("if" code nil (reparse-symbol indented_block_body) [6033 6911])
+                            ("params" variable nil (reparse-symbol indented_block_body) [6981 7014])
+                            ("if" code nil (reparse-symbol indented_block_body) [7019 7564])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7569 7616]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1779 1783])
+                            ("source_vocab_size" variable nil (reparse-symbol function_parameters) [1785 1802])
+                            ("target_vocab_size" variable nil (reparse-symbol function_parameters) [1804 1821])
+                            ("buckets" variable nil (reparse-symbol function_parameters) [1823 1830])
+                            ("size" variable nil (reparse-symbol function_parameters) [1832 1836])
+                            ("num_layers" variable nil (reparse-symbol function_parameters) [1853 1863])
+                            ("max_gradient_norm" variable nil (reparse-symbol function_parameters) [1865 1882])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1884 1894])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [1896 1909])
+                            ("learning_rate_decay_factor" variable nil (reparse-symbol function_parameters) [1926 1952])
+                            ("use_lstm" variable nil (reparse-symbol function_parameters) [1954 1962])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [1985 1996])
+                            ("forward_only" variable nil (reparse-symbol function_parameters) [2002 2014]))                          
+                        :documentation "Create the model.
+
+    Args:
+      source_vocab_size: size of the source vocabulary.
+      target_vocab_size: size of the target vocabulary.
+      buckets: a list of pairs (I, O), where I specifies maximum input length
+        that will be processed in that bucket, and O specifies maximum output
+        length. Training instances that have inputs longer than I or outputs
+        longer than O will be pushed to the next bucket and padded accordingly.
+        We assume that the list is sorted, e.g., [(2, 4), (8, 16)].
+      size: number of units in each layer of the model.
+      num_layers: number of layers in the model.
+      max_gradient_norm: gradients will be clipped to maximally this norm.
+      batch_size: the size of the batches used during training;
+        the model construction is independent of batch_size, so it can be
+        changed after initialization if this is convenient, e.g., for decoding.
+      learning_rate: learning rate to start with.
+      learning_rate_decay_factor: decay learning rate by this much when needed.
+      use_lstm: if true, we use LSTM cells instead of GRU cells.
+      num_samples: number of samples for sampled softmax.
+      forward_only: if set, we do not construct the backward pass in the model.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1766 7617])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7629 7633])
+                            ("session" variable nil (reparse-symbol function_parameters) [7635 7642])
+                            ("encoder_inputs" variable nil (reparse-symbol function_parameters) [7644 7658])
+                            ("decoder_inputs" variable nil (reparse-symbol function_parameters) [7660 7674])
+                            ("target_weights" variable nil (reparse-symbol function_parameters) [7676 7690])
+                            ("bucket_id" variable nil (reparse-symbol function_parameters) [7703 7712])
+                            ("forward_only" variable nil (reparse-symbol function_parameters) [7714 7726]))                          
+                        :documentation "Run a step of the model feeding the given inputs.
+
+    Args:
+      session: tensorflow session to use.
+      encoder_inputs: list of numpy int vectors to feed as encoder inputs.
+      decoder_inputs: list of numpy int vectors to feed as decoder inputs.
+      target_weights: list of numpy float vectors to feed as target weights.
+      bucket_id: which bucket of the model to use.
+      forward_only: whether to do the backward step or only forward.
+
+    Returns:
+      A triple consisting of gradient norm (or None if we did not do backward),
+      average perplexity, and the outputs.
+
+    Raises:
+      ValueError: if length of encoder_inputs, decoder_inputs, or
+        target_weights disagrees with bucket size for the specified bucket_id.
+    ")
+                        (reparse-symbol indented_block_body) [7620 10481])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10498 10502])
+                            ("data" variable nil (reparse-symbol function_parameters) [10504 10508])
+                            ("bucket_id" variable nil (reparse-symbol function_parameters) [10510 10519]))                          
+                        :documentation "Get a random batch of data from the specified bucket, prepare for step.
+
+    To feed data in step(..) it must be a list of batch-major vectors, while
+    data here contains single length-major cases. So the main logic of this
+    function is to re-index data cases to be in the proper format for feeding.
+
+    Args:
+      data: a tuple of size len(self.buckets) in which each element contains
+        lists of pairs of input and output data that we use to create a batch.
+      bucket_id: integer, which bucket to get the batch for.
+
+    Returns:
+      The triple (encoder_inputs, decoder_inputs, target_weights) for
+      the constructed batch that has the proper format to call step(...) later.
+    ")
+                        (reparse-symbol indented_block_body) [10484 13430]))                  
+                :type "class")
+                nil [997 13430]))          
+    :file "seq2seq_model.py"
+    :pointmax 13430
+    :fsize 13429
+    :lastmodtime '(22251 21737 969700 564000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!TensorFlow!tensorflow!tensorflow!models!rnn!translate!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

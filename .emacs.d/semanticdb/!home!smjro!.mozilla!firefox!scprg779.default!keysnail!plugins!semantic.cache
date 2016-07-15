@@ -1,0 +1,22 @@
+;; Object plugins/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plugins/"
+  :tables (list 
+   (semanticdb-table "K2Emacs.ks.js"
+    :major-mode 'js-mode
+    :tags 
+        '( ("getOption" function (:arguments 
+              ( ("aName" variable nil (reparse-symbol FormalParameterList) [2889 2894]))              ) nil [2870 3147])
+            ("editext" function (:arguments 
+              ( ("ev" variable nil (reparse-symbol FormalParameterList) [15479 15481]))              ) nil [15462 15645]))          
+    :file "K2Emacs.ks.js"
+    :pointmax 15745
+    :fsize 17752
+    :lastmodtime '(22014 42667 915165 558000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!.mozilla!firefox!scprg779.default!keysnail!plugins!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

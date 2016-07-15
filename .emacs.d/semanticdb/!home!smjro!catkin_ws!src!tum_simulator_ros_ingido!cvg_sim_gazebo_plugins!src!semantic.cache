@@ -1,0 +1,145 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "quadrotor_simple_controller.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("hector_quadrotor_controller/quadrotor_simple_controller.h" include (:system-flag t) nil [2251 2319])
+            ("gazebo/common/Events.hh" include nil nil [2320 2354])
+            ("gazebo/physics/physics.hh" include nil nil [2355 2391])
+            ("cmath" include (:system-flag t) nil [2393 2409])
+            ("stdlib.h" include (:system-flag t) nil [2410 2429])
+            ("gazebo" type
+               (:members 
+                  ( ("GazeboQuadrotorSimpleController" function
+                       (:constructor-flag t
+                        :parent "GazeboQuadrotorSimpleController"
+                        :type ("GazeboQuadrotorSimpleController" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2451 2539])
+                    ("GazeboQuadrotorSimpleController" function
+                       (:destructor-flag t
+                        :parent "GazeboQuadrotorSimpleController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2636 2822])
+                    ("Load" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :arguments 
+                          ( ("_model" variable (:type ("physics::ModelPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2971 2996])
+                            ("_sdf" variable (:type ("sdf::ElementPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2997 3018]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2928 7567])
+                    ("VelocityCallback" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :arguments 
+                          ( ("velocity" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("geometry_msgs::TwistConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7718 7763]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7663 8956])
+                    ("ImuCallback" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :arguments 
+                          ( ("imu" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("sensor_msgs::ImuConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9008 9044]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8958 9311])
+                    ("StateCallback" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :arguments 
+                          ( ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("nav_msgs::OdometryConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9365 9405]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9313 10245])
+                    ("Update" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10353 15040])
+                    ("Reset" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15147 15614])
+                    ("PIDController" function
+                       (:parent "GazeboQuadrotorSimpleController::PIDController"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [15730 15797])
+                    ("PIDController" function
+                       (:destructor-flag t
+                        :parent "GazeboQuadrotorSimpleController::PIDController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15799 15867])
+                    ("Load" function
+                       (:parent "GazeboQuadrotorSimpleController::PIDController"
+                        :arguments 
+                          ( ("_sdf" variable (:type ("sdf::ElementPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15927 15948])
+                            ("prefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15949 15975]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15869 16757])
+                    ("update" function
+                       (:parent "GazeboQuadrotorSimpleController::PIDController"
+                        :arguments 
+                          ( ("new_input" variable (:type "double") (reparse-symbol arg-sub-list) [16821 16838])
+                            ("x" variable (:type "double") (reparse-symbol arg-sub-list) [16839 16848])
+                            ("dx" variable (:type "double") (reparse-symbol arg-sub-list) [16849 16859])
+                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [16860 16870]))                          
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [16759 17391])
+                    ("reset" function
+                       (:parent "GazeboQuadrotorSimpleController::PIDController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [17393 17505])
+                    ("NavdataCallback" function
+                       (:parent "GazeboQuadrotorSimpleController"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ardrone_autonomy::NavdataConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17561 17606]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [17507 17639]))                  
+                :type "namespace")
+                nil [2431 17744]))          
+    :file "quadrotor_simple_controller.cpp"
+    :pointmax 17765
+    :fsize 17764
+    :lastmodtime '(22040 46847 157422 896000)
+    :unmatched-syntax '((semantic-list 17708 . 17741) (symbol 17684 . 17708))
+    )
+   (semanticdb-table "test_trajectory.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1838 1858])
+            ("geometry_msgs/Twist.h" include (:system-flag t) nil [1859 1891])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1902 1911])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1912 1924]))                  
+                :type "int")
+                nil [1893 3290]))          
+    :file "test_trajectory.cpp"
+    :pointmax 3291
+    :fsize 3290
+    :lastmodtime '(22040 46847 161422 896000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!smjro!catkin_ws!src!tum_simulator_ros_ingido!cvg_sim_gazebo_plugins!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

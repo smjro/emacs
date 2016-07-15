@@ -1,0 +1,30 @@
+;; Object pfmpc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pfmpc/"
+  :tables (list 
+   (semanticdb-table "pro.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpc.h" include nil nil [1 16])
+            ("unistd.h" include (:system-flag t) nil [17 35])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [46 51]))                  
+                :type "int")
+                nil [37 7285]))          
+    :file "pro.c"
+    :pointmax 7280
+    :fsize 7543
+    :lastmodtime '(21843 28029 254545 243000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mpc.h"
+    :file "mpc.h"
+    :fsize 27250
+    :lastmodtime '(21843 26920 2517 309000)
+    )
+   )
+  :file "!home!shimadakento!pro!pfmpc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

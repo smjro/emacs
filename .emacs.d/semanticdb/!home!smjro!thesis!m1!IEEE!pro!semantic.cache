@@ -1,0 +1,271 @@
+;; Object pro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pro/"
+  :tables (list 
+   (semanticdb-table "mpc.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MatCreate" function
+               (:arguments 
+                  ( ("mc" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16 27])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [28 34])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [35 41]))                  
+                :type "void")
+                nil [1 160])
+            ("MatInit" function
+               (:arguments 
+                  ( ("mc" variable
+                       (:pointer 1
+                        :type ("Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [174 185]))                  
+                :type "int")
+                nil [162 2115]))          
+    :file "mpc.c"
+    :pointmax 2116
+    :fsize 2115
+    :lastmodtime '(22261 59053 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pro.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpc.h" include nil nil [1 16])
+            ("unistd.h" include (:system-flag t) nil [17 35])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [46 51]))                  
+                :type "int")
+                nil [37 5239]))          
+    :file "pro.c"
+    :pointmax 5240
+    :fsize 5417
+    :lastmodtime '(22261 59053 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mpc.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("stdlib.h" include (:system-flag t) nil [39 58])
+            ("string.h" include (:system-flag t) nil [59 78])
+            ("math.h" include (:system-flag t) nil [79 96])
+            ("memory.h" include (:system-flag t) nil [97 116])
+            ("sys/file.h" include (:system-flag t) nil [117 138])
+            ("gsl/gsl_matrix.h" include (:system-flag t) nil [139 166])
+            ("gsl/gsl_vector.h" include (:system-flag t) nil [167 194])
+            ("gsl/gsl_linalg.h" include (:system-flag t) nil [195 222])
+            ("gsl/gsl_blas.h" include (:system-flag t) nil [223 248])
+            ("gsl/gsl_rng.h" include (:system-flag t) nil [249 273])
+            ("gsl/gsl_randist.h" include (:system-flag t) nil [274 302])
+            ("gsl/gsl_cdf.h" include (:system-flag t) nil [303 327])
+            ("gsl/gsl_randist.h" include (:system-flag t) nil [328 356])
+            ("gsl/gsl_statistics.h" include (:system-flag t) nil [357 388])
+            ("time.h" include (:system-flag t) nil [389 406])
+            ("randlib.h" include nil nil [408 427])
+            ("N" variable (:constant-flag t) nil [437 438])
+            ("M" variable (:constant-flag t) nil [450 451])
+            ("m" variable (:constant-flag t) nil [462 463])
+            ("g" variable (:constant-flag t) nil [477 478])
+            ("bs" variable (:constant-flag t) nil [511 513])
+            ("d" variable (:constant-flag t) nil [544 545])
+            ("ks" variable (:constant-flag t) nil [583 585])
+            ("PI" variable (:constant-flag t) nil [616 618])
+            ("Ixx" variable (:constant-flag t) nil [646 649])
+            ("Iyy" variable (:constant-flag t) nil [667 670])
+            ("Izz" variable (:constant-flag t) nil [688 691])
+            ("NP" variable (:constant-flag t) nil [710 712])
+            ("NH" variable (:constant-flag t) nil [725 727])
+            ("TOTAL" variable (:constant-flag t) nil [739 744])
+            ("gp" variable
+               (:pointer 1
+                :type ("FILE" type (:type "class") nil nil))
+                nil [751 765])
+            ("fp" variable
+               (:pointer 1
+                :type ("FILE" type (:type "class") nil nil))
+                nil [751 765])
+            ("sigu" variable (:type "double") nil [767 784])
+            ("sigu_1" variable (:type "double") nil [811 830])
+            ("sigv" variable (:type "double") nil [857 873])
+            ("sigw" variable (:type "double") nil [902 919])
+            ("rnd_2" variable (:type "double") nil [953 966])
+            ("s" variable
+               (:dereference 1
+                :type "double")
+                nil [967 979])
+            ("PT" variable
+               (:dereference 1
+                :type "double")
+                nil [980 994])
+            ("PTz" variable
+               (:dereference 1
+                :type "double")
+                nil [995 1010])
+            ("ct" variable (:type "int") nil [1011 1020])
+            ("Phi" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1022 1066])
+            ("Gamma" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1068 1114])
+            ("acc" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1115 1159])
+            ("alpha" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1166 1212])
+            ("tmp1" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1221 1264])
+            ("ua" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1265 1308])
+            ("goal" variable
+               (:pointer 1
+                :type ("gsl_matrix" type (:type "class") nil nil))
+                nil [1325 1367])
+            ("mgbs" variable (:type "double") nil [1379 1391])
+            ("STATE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("x" variable
+                             (:pointer 1
+                              :type ("gsl_matrix" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1411 1425])
+                          ("u" variable
+                             (:pointer 1
+                              :type ("gsl_matrix" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1436 1450]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1393 1465])
+            ("PARTICLE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("st" variable (:type ("STATE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1485 1495])
+                          ("w" variable (:type "double") (reparse-symbol classsubparts) [1514 1523]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1467 1549])
+            ("FILTER" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("pt" variable
+                             (:pointer 1
+                              :type ("PARTICLE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1569 1582])
+                          ("np" variable (:type "int") (reparse-symbol classsubparts) [1585 1592])
+                          ("nd" variable (:type "int") (reparse-symbol classsubparts) [1623 1630])
+                          ("hs" variable (:type "int") (reparse-symbol classsubparts) [1661 1668]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1551 1719])
+            ("f" variable (:type ("FILTER" type (:type "class") nil nil)) nil [1721 1730])
+            ("pf" variable (:type ("FILTER" type (:type "class") nil nil)) nil [1731 1741])
+            ("CreateFilter" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILTER" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1761 1771])
+                    ("pf" variable
+                       (:pointer 1
+                        :type ("FILTER" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1771 1782])
+                    ("np" variable (:type "int") (reparse-symbol arg-sub-list) [1783 1790])
+                    ("nd" variable (:type "int") (reparse-symbol arg-sub-list) [1791 1798])
+                    ("hs" variable (:type "int") (reparse-symbol arg-sub-list) [1799 1806]))                  
+                :type "void")
+                nil [1743 2479])
+            ("distance" function
+               (:arguments 
+                  ( ("xc" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2497 2512]))                  
+                :type "double")
+                nil [2481 2736])
+            ("dynamics2" function
+               (:arguments 
+                  ( ("xc" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2753 2768])
+                    ("xp" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2769 2784]))                  
+                :type "void")
+                nil [2738 4996])
+            ("Predict" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILTER" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5011 5021])
+                    ("pf" variable
+                       (:pointer 1
+                        :type ("FILTER" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5022 5033])
+                    ("cx" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5034 5049]))                  
+                :type "void")
+                nil [4998 8983])
+            ("Evaluation" function
+               (:arguments 
+                  ( ("f" variable (:type ("FILTER" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9002 9011]))                  
+                :type "void")
+                nil [8986 9019])
+            ("CalcCost" function
+               (:arguments 
+                  ( ("x" variable (:type ("gsl_matrix" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9037 9050]))                  
+                :type "double")
+                nil [9021 9095]))          
+    :file "mpc.h"
+    :pointmax 9727
+    :fsize 10296
+    :lastmodtime '(22261 59053 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("N" . ((number "12" 439 . 441)))
+          ("PI" . ((number "3.1415926535" 619 . 631)))
+          ("Izz" . ((number "1.016e-2" 692 . 700)))
+          ("NP" . ((number "100" 713 . 716)))
+          ("m" . ((number "0.42" 464 . 468)))
+          ("bs" . ((number "29.1e-5" 514 . 521)))
+          ("Ixx" . ((number "5.136e-3" 650 . 658)))
+          ("TOTAL" . ((number "1000" 745 . 749)))
+          ("ks" . ((number "1.14e-6" 586 . 593)))
+          ("NH" . ((number "50" 728 . 730)))
+          ("d" . ((number "0.2" 546 . 549)))
+          ("Iyy" . ((number "5.136e-3" 671 . 679)))
+          ("M" . ((number "1" 452 . 453)))
+          ("g" . ((number "9.8" 479 . 482)))
+          )
+
+    )
+   (semanticdb-table "randlib.h"
+    :file "randlib.h"
+    :fsize 1674
+    :lastmodtime '(22261 59052 0 0)
+    )
+   )
+  :file "!home!smjro!thesis!m1!IEEE!pro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
