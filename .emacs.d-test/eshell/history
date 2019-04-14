@@ -1,0 +1,32 @@
+ls
+ls
+ls
+cd undohist/
+ls
+sudo pip install pep8
+pip install --upgrade pip
+ls
+cd 
+cd study/program/
+ls
+cd python/
+ls
+cd python_challenge/
+ls
+cd level6
+ls
+cd ../../
+cd ..
+ls
+cd c++/
+ls
+cd
+brew install global --with-exuberant-ctags --with-pygments
+sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+brew doctor
+sudo apt-get -y install build-essential curl git python-setuptools ruby
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)"
+sudo apt-get update
+sudo apt-get upgrade
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)"
