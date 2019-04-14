@@ -1,9 +1,0 @@
-import urllib.request as req
-from PIL import Image
-from io import BytesIO
-
-url = "http://www.pythonchallenge.com/pc/def/oxygen.png"
-
-img = Image.open(BytesIO(req.urlopen(url).read()))
-print(img)
-
