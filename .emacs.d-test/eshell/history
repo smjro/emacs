@@ -30,3 +30,40 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/i
 sudo apt-get update
 sudo apt-get upgrade
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/linuxbrew/go/install)"
+ls
+ls
+cd
+cd git/
+ls
+cd emacs/
+ls
+ls -a
+cd .emacs.d-test/
+ls
+ls
+cd backups/
+ls
+ls
+cd ..
+ls
+cd ..
+ls -a
+cd .emacs.d-test/
+ls
+ls -a
+cd backups/
+ls -a
+cd ..
+ls
+ls -a
+cd backups/
+ls
+ls -a
+cd ..
+ls
+cd ..
+git rm --cached -r
+cd .emacs.d-test/
+ls
+cd backups/
+git rm --cached -r .

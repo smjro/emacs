@@ -67,7 +67,6 @@
 ;; モードラインの行番号を表示
 (line-number-mode t)
 ;; 行番号の表示
-;; (global-linum-mode)
 (global-display-line-numbers-mode)
 
 ;; ========================================
@@ -228,6 +227,48 @@
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; (with-eval-after-load 'flycheck
 ;;   (flycheck-pos-tip-mode))
+
+;; ========================================
+;; org
+;; ----------------------------------------
+;; メモ書き・ToDo管理
+;; ========================================
+(add-hook 'org-mode-hook 'howm-mode)
+(add-to-list 'auto-mode-alist '("\\.howm$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
+(global-unset-key (kbd "C-x ,"))
+(setq howm-prefix (kbd "C-x ,"))
+(eval-after-load "howm-mode"
+  '(progn
+    (define-key howm-mode-map (kbd "C-c C-c") nil)))
+(setq howm-use-color nil)
+
+;; ========================================
+;; howm
+;; ----------------------------------------
+;; メモ書き・ToDo管理
+;; ========================================
+;; howmメモ保存箇所
+(setq howm-directory (concat user-emacs-directory "howm"))
+;; howm-menuの言語設定
+(setq howm-menu-lang 'ja)
+;; howmメモを1日1ファイルにする
+(setq howm-file-name-format "%Y/%m/%Y-%m-%d.howm")
+;; howm-modeを読み込む
+(when (require 'howm-mode nil t)
+  ;; C-c, ,でhowm-menuを起動
+  (define-key global-map (kbd "C-c ,,") 'howm-menu))
+;; howmメモを保存と同時に閉じる
+(defun howm-save-buffer-and-kill ()
+  "howmメモを保存と同時に閉じます。"
+  (interactive)
+  (when (and (buffer-file-name)
+             (string-match "\\.howm" (buffer-file-name)))
+    (save-buffer)
+    (kill-buffer nil)))
+;; C-c C-cでメモの保存と同時にバッファを閉じる
+(define-key howm-mode-map (kbd "C-c C-c") 'howm-save-buffer-and-kill)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -235,7 +276,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit wgrep undohist undo-tree quickrun moccur-edit helm-descbinds helm-c-moccur flycheck-pos-tip auto-complete))))
+    (howm wgrep undohist undo-tree quickrun moccur-edit magit helm-descbinds helm-c-moccur flycheck-pos-tip auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
