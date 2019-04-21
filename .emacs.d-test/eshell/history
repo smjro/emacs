@@ -67,3 +67,39 @@ cd .emacs.d-test/
 ls
 cd backups/
 git rm --cached -r .
+ls
+cd .emacs.d/
+ls
+cd backups/
+ls
+git rm -r --cached ../auto-save-list/
+git rm -r --cached ../
+git rm -r --cached ../../git/emacs/
+ipython
+ls
+ls
+python hoge.py 
+python hoge.py 
+python hoge.py 
+gtags --gtagslabel=pygments --debug
+ls
+tree
+ls
+cd gtags_test/
+cd ..
+mv hoge.py gtags_test/
+ls
+rm GPATH GTAGS GRTAGS 
+ls
+cd gtags_test/
+ls
+gtags --gtagslabel=pygments --debug
+tree
+global -sx hello_world hoge.py 
+global -sx hello hoge.py 
+ls
+global -ax -t hello_world
+ls
+gtags --gtagslabel=pygments --debug
+tree
+global -sx hello hoge.php

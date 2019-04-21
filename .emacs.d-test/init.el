@@ -45,14 +45,22 @@
 (define-key key-translation-map (kbd "C-h")(kbd "<DEL>"))
 ;; C-x ?をヘルプにする
 (define-key global-map (kbd "C-x ?") 'help-command)
-;; C-jをマーキングコマンドにする
+;; C-jでマークセット
 (define-key global-map (kbd "C-j") 'set-mark-command)
 ;; 行の折り返し表示を切り替える
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 ;; C-tでウィンドウ切替
 (define-key global-map (kbd "C-t") 'other-window)
-;; magit
-(define-key global-map (kbd "C-x m") 'magit-status)
+;; フルスクリーン化
+(define-key global-map (kbd "M-RET") 'toggle-frame-fullscreen)
+
+;; ========================================
+;; 改行コードの表記
+;; ========================================
+(setq eol-mnemonic-dos       ":Dos")
+(setq eol-mnemonic-mac       ":Mac")
+(setq eol-mnemonic-unix      ":Unix")
+(setq eol-mnemonic-undecided ":???")
 
 ;; ========================================
 ;; 起動メッセージの非表示
@@ -60,12 +68,20 @@
 (setq inhibit-startup-message t)
 
 ;; ========================================
+;; カーソル
+;; ========================================
+;; カーソルの点滅(有効:1, 無効:0)
+(blink-cursor-mode 0)
+;; カーソルカラー変更
+(add-to-list 'default-frame-alist '(cursor-color . "RoyalBlue1"))
+
+;; ========================================
 ;; 行番号／カラム番号の表示
 ;; ========================================
 ;; モードラインにカラム番号を表示
 (column-number-mode t)
 ;; モードラインの行番号を表示
-(line-number-mode t)
+;; (line-number-mode t)
 ;; 行番号の表示
 (global-display-line-numbers-mode)
 
@@ -90,9 +106,13 @@
 (display-time-mode t)
 
 ;; ========================================
-;; タイトルバーにファイルのフルパスを表示
+;; タイトルバー
 ;; ========================================
-(setq frame-title-format "%f")
+;; タイトルバーにファイルのフルパスを表示
+;; (setq frame-title-format "%f")
+;; タイトルバーにemacsのversionを表示
+(setq frame-title-format
+      '("emacs " emacs-version (buffer-file-name " - %f")))
 
 ;; ========================================
 ;; フェイスの表示・装飾
@@ -123,6 +143,16 @@
 (setq auto-save-interval 60)
 
 ;; ========================================
+;; isearch
+;; ========================================
+;; 大文字と小文字を区別しないでサーチ(有効:t, 無効:nil)
+(setq-default case-fold-search nil)
+;; C-eで検索文字列を編集
+(define-key isearch-mode-map (kbd "C-e") 'isearch-edit-string)
+;; Tabで検索文字列を補完
+(define-key isearch-mode-map (kbd "TAB") 'isearch-yank-word)
+
+;; ========================================
 ;; auto complete
 ;; ========================================
 ;; auto-completeの設定
@@ -135,9 +165,21 @@
 ;; ========================================
 ;; helm
 ;; ========================================
+(require 'helm)
 (require 'helm-config)
+(helm-mode 1)
 ;; M-yで過去の履歴から貼り付け可能にする
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+;; C-x C-fをhelm-find-filesに変更
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+;; C-x bでhelm-miniを表示
+(define-key global-map (kbd "C-x b") 'helm-mini)
+;; 補完をtabでできるようにする
+(define-key helm-map (kbd "TAB") 'helm-execute-persistent-action)
+;; action候補の表示
+(define-key helm-map (kbd "C-z") 'helm-select-action)
+;; C-jでマークセット
+(define-key helm-map (kbd "C-j") 'helm-toggle-visible-mark)
 
 ;; ========================================
 ;; helm-descbinds
@@ -169,6 +211,12 @@
 (defadvice moccur-edit-change-file
     (after save-after-moccur-edit-buffer activate)
   (save-buffer))
+
+;; ========================================
+;; magit
+;; ========================================
+;; C-x mでmagit起動
+(define-key global-map (kbd "C-x m") 'magit-status)
 
 ;; ========================================
 ;; wgrep
@@ -269,6 +317,57 @@
 ;; C-c C-cでメモの保存と同時にバッファを閉じる
 (define-key howm-mode-map (kbd "C-c C-c") 'howm-save-buffer-and-kill)
 
+;; ========================================
+;; elscreen
+;; ========================================
+;; プレフィクスキーはC-z
+(setq elscreen-prefix-key (kbd "C-z"))
+(elscreen-start)
+;; タブの先頭に[X]を表示しない
+(setq elscreen-tab-display-kill-screen nil)
+;; header-lineの先頭に[<->]を表示しない
+(setq elscreen-tab-display-control nil)
+;; バッファ名・モード名からタブに表示させる内容を決定する(デフォルト設定)
+(setq elscreen-buffer-to-nickname-alist
+      '(("^dired-mode$" .
+         (lambda ()
+           (format "Dired(%s)" dired-directory)))
+        ("^mew-draft-mode$" .
+         (lambda ()
+           (format "Info(%s)" (buffer-name (current-buffer)))))
+        ("^mew-" . "Mew")
+        ("^irchat-" . "ERChat")
+        ("^liece-" . "Liece")
+        ("^lookup-" . "Lookup")))
+(setq elscreen-mode-to-nickname-alist
+      '(("[Ss]shell" . "shell")
+        ("compilation" . "compile")
+        ("-telnet" . "OnlineDict")
+        ("*WL:Message*" . "Wanderlust")))
+
+;; ========================================
+;; helm-gtags
+;; ========================================
+(require 'helm-gtags)
+(helm-gtags-mode t)
+;; バッファの保存に連動してタグを自動更新
+(setq helm-gtags-auto-update t)
+
+(add-hook 'helm-gtags-mode-hook
+          '(lambda ()
+             ;; 文脈から判断してジャンプ
+             (local-set-key (kbd "M-.") 'helm-gtags-dwim)
+             ;; 定義元へ
+             (local-set-key (kbd "M-t") 'helm-gtags-find-tag)
+             ;; 参照元へ
+             (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+             ;; 変数の定義元/参照先へ
+             (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)))
+
+(add-hook 'python-mode-hook 'helm-gtags-mode)
+(add-hook 'php-mode-hook 'helm-gtags-mode)
+
+;; ========================================
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -276,10 +375,14 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (howm wgrep undohist undo-tree quickrun moccur-edit magit helm-descbinds helm-c-moccur flycheck-pos-tip auto-complete))))
+    (helm-gtags elscreen howm wgrep undohist undo-tree quickrun moccur-edit magit helm-descbinds helm-c-moccur flycheck-pos-tip auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+
